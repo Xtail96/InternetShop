@@ -17,15 +17,16 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
-              <caret line="157" column="67" lean-forward="false" selection-start-line="157" selection-start-column="67" selection-end-line="157" selection-end-column="67" />
+              <caret line="172" column="67" lean-forward="false" selection-start-line="172" selection-start-column="67" selection-end-line="172" selection-end-column="67" />
               <folding>
-                <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-                <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-                <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-                <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-                <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-                <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-                <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+                <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+                <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+                <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+                <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+                <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+                <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+                <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+                <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
               </folding>
             </state>
           </provider>
@@ -34,10 +35,26 @@
       <file leaf-file-name="ItemCard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2384">
-              <caret line="193" column="90" lean-forward="false" selection-start-line="193" selection-start-column="90" selection-end-line="193" selection-end-column="90" />
+            <state relative-caret-position="144">
+              <caret line="118" column="60" lean-forward="false" selection-start-line="118" selection-start-column="60" selection-end-line="118" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getPageContent#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getStyles#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getScripts#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getBody#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getContainer#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getNavigation#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getMain#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getProductName#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getProduct#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getProductHeader#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getProductTabsHeaders#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getProductDescription#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getProductInformation#0;class#ItemCard#0" expanded="false" />
+                <element signature="method#getProductRewiews#0;class#ItemCard#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,8 +109,8 @@
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/out/artifacts/itemCard_war_exploded/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/edu/etu/web/ItemCard.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/edu/etu/web/ItemCard.java" />
       </list>
     </option>
   </component>
@@ -722,12 +739,12 @@
       <workItem from="1506869482293" duration="1821000" />
       <workItem from="1506871390860" duration="83000" />
       <workItem from="1506872597939" duration="941000" />
-      <workItem from="1506878132686" duration="3256000" />
+      <workItem from="1506878132686" duration="6805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7875000" />
+    <option name="totallyTimeSpent" value="11424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -809,7 +826,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -823,13 +840,14 @@
         <state relative-caret-position="1845">
           <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
           <folding>
-            <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
           </folding>
         </state>
       </provider>
@@ -871,13 +889,14 @@
         <state relative-caret-position="161">
           <caret line="169" column="50" lean-forward="false" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
           <folding>
-            <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
           </folding>
         </state>
       </provider>
@@ -888,6 +907,22 @@
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getPageContent#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getStyles#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getScripts#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getBody#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContainer#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getNavigation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMain#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductName#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProduct#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductHeader#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductTabsHeaders#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductDescription#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductInformation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductRewiews#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -911,13 +946,14 @@
         <state relative-caret-position="2535">
           <caret line="169" column="50" lean-forward="false" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
           <folding>
-            <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
           </folding>
         </state>
       </provider>
@@ -928,6 +964,22 @@
           <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getPageContent#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getStyles#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getScripts#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getBody#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContainer#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getNavigation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMain#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductName#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProduct#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductHeader#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductTabsHeaders#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductDescription#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductInformation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductRewiews#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -974,13 +1026,14 @@
         <state relative-caret-position="1845">
           <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
           <folding>
-            <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
           </folding>
         </state>
       </provider>
@@ -990,13 +1043,14 @@
         <state relative-caret-position="161">
           <caret line="169" column="50" lean-forward="false" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
           <folding>
-            <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1053,6 +1107,22 @@
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getPageContent#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getStyles#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getScripts#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getBody#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContainer#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getNavigation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMain#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductName#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProduct#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductHeader#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductTabsHeaders#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductDescription#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductInformation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductRewiews#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1062,13 +1132,14 @@
         <state relative-caret-position="2535">
           <caret line="169" column="50" lean-forward="false" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
           <folding>
-            <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1079,6 +1150,22 @@
           <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getPageContent#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getStyles#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getScripts#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getBody#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContainer#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getNavigation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMain#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductName#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProduct#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductHeader#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductTabsHeaders#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductDescription#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductInformation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductRewiews#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1125,13 +1212,14 @@
         <state relative-caret-position="1845">
           <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
           <folding>
-            <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1220,25 +1308,42 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
-          <caret line="157" column="67" lean-forward="false" selection-start-line="157" selection-start-column="67" selection-end-line="157" selection-end-column="67" />
+          <caret line="172" column="67" lean-forward="false" selection-start-line="172" selection-start-column="67" selection-end-line="172" selection-end-column="67" />
           <folding>
-            <marker date="1506883448000" expanded="true" signature="3763:7044" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3763:7052" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3786:7035" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3839:7024" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3876:4423" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="3980:4408" ph="..." />
-            <marker date="1506883448000" expanded="true" signature="4463:4927" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7374" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4093:7382" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4116:7365" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4169:7354" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4206:4753" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4310:4738" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="4793:5257" ph="..." />
+            <marker date="1506884034000" expanded="true" signature="5317:5805" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2384">
-          <caret line="193" column="90" lean-forward="false" selection-start-line="193" selection-start-column="90" selection-end-line="193" selection-end-column="90" />
+        <state relative-caret-position="144">
+          <caret line="118" column="60" lean-forward="false" selection-start-line="118" selection-start-column="60" selection-end-line="118" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getPageContent#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getStyles#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getScripts#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getBody#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContainer#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getNavigation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMain#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductName#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProduct#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductHeader#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductTabsHeaders#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductDescription#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductInformation#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getProductRewiews#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
