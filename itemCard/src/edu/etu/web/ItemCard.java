@@ -26,9 +26,9 @@ public class ItemCard extends HttpServlet{
 
     private String getPageContent(String value) {
         String html = "<html><body> " +
-                "<h1>Hello to fearsoff</h1>" +
+                "<h1>Hello World!</h1>" + value +
                 "</body></html>";
 
-        return html + value;
+        return html;
     }
 }

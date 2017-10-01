@@ -16,6 +16,6 @@
 
     <servlet-mapping>
         <servlet-name>ItemCard</servlet-name>
-        <url-pattern>/ItemCard</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>
