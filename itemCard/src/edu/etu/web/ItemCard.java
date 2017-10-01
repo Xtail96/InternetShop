@@ -163,7 +163,7 @@ public class ItemCard extends HttpServlet{
 
     private String getProductHeader(){
         String productHeader = "<div class=\"product_header\">\n" +
-                "            <img src=\"img/decor/2.png\" alt=\"Картинка товара\" />\n" +
+                "            <img src=\"https://s199f.storage.yandex.net/rdisk/855451bbb49d382d48629e06945257a2c842dbd50d0014bd21af5048bd25b19a/59d18b96/WonbNbs60kDoqDWsBC6cYYSQuQhgzXuWmI7IUNjBg8qBFSwacwSFmG6p8GawtGC67PjWnsLTgXGGO3F3u_zZlw==?uid=0&filename=2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&fsize=707492&hid=e961642f6ea3731978e46ddf197bfb63&media_type=image&tknv=v2&etag=e23e1954bba72a71e6087c87cf082c2a&rtoken=oalE6NII3KTB&force_default=no&ycrid=na-9495da2d654dcb77bf9ffbca0af8be3e-downloader17h&ts=55a85a8299180&s=5c232135116b0d3ae9ad9cbc2dd1ba91344882ea696e9585c1f66fa7618c3799&pb=U2FsdGVkX1_iNz5yWibjmWZ5q6BFqKyvSSYGlKo1TImZ7DWixR89xM5xJByPS0nVnEuuVX7BWw3PNTBS3NGQR9H1idNCpL92q-kvK9qtQzU=\" alt=\"Картинка товара\" />\n" +
                 "            <div class=\"product_price\">\n" +
                 "              <b>Цена: 1000р</b>\n" +
                 "              <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также сложившаяся структура организации требуют определения и уточнения систем массового участия.</p>\n" +
