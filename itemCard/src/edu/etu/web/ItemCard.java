@@ -191,13 +191,13 @@ public class ItemCard extends HttpServlet{
                     "  </script>\n" +
                     "\n" +
                     "</head>\n" +
-                    "<body onload=\"show_element('product_description', 'description_tab')\">\n" +
+                    "<body onload=\"show_element(" + "'" + button_id + "', '" + value + "')\">\n" +
                     "  <div class=\"container\">\n" +
                     "    <div class=\"main\">\n" +
-                    "      <h1>Product Name</h1>\n" + button_id + value +
+                    "      <h1>Product Name</h1>\n" +
                     "      <div id='product'>\n" +
                     "        <div class=\"product_header\">\n" +
-                    "            <img src=\"img/decor/2.png\" alt=\"Картинка товара\" />\n" +
+                    "            <img src=\"../img/decor/2.png\" alt=\"Картинка товара\" />\n" +
                     "            <div class=\"product_price\">\n" +
                     "              <b>Цена: 1000р</b>\n" +
                     "              <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также сложившаяся структура организации требуют определения и уточнения систем массового участия.</p>\n" +
