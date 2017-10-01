@@ -10,7 +10,7 @@
 
         <init-param>
             <param-name>activeTab</param-name>
-            <param-value>Description</param-value>
+            <param-value>description_tab</param-value>
         </init-param>
     </servlet>
 
