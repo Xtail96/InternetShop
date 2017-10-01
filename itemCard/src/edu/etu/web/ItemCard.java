@@ -4,8 +4,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Cookie;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import java.util.Locale;
+import java.util.Map;
+import java.util.ResourceBundle;
 
 /**
  * Created by Xtail on 01.10.17.
@@ -15,23 +20,37 @@ public class ItemCard extends HttpServlet{
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
 
+        final Map<String, String[]> params = request.getParameterMap();
+
+        Cookie langCookie = null;
+        if(params.containsKey("lang"))
+        {
+            langCookie = new Cookie("lang", params.get("lang")[0]);
+        } else {
+            langCookie = new Cookie("lang", "ru");
+        }
+        response.addCookie(langCookie);
+
+        Locale locale = new Locale.Builder().setLanguage(langCookie.getValue()).build();
+        ResourceBundle resources = ResourceBundle.getBundle("strings", locale);
+
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
 
         String value = getInitParameter("activeTab");
 
-        out.println(getPageContent(value));
+        out.println(getPageContent(value, resources));
         out.close();
     }
 
-    private String getPageContent(String activeTab) {
+    private String getPageContent(String activeTab, ResourceBundle resources) {
         String tab_id = activeTab;
         String content_id = getContentId(tab_id);
         String meta = getMeta();
         String styles = getStyles();
         String scripts = getScripts();
         String head = "<html>" + "<head>" + meta + styles + scripts + "</head>";
-        String body  = getBody(content_id, tab_id);
+        String body  = getBody(content_id, tab_id, resources);
         String html = head + body;
         return html;
     }
@@ -116,17 +135,17 @@ public class ItemCard extends HttpServlet{
         return scripts;
     }
 
-    private String getBody(String content_id, String tab_id){
+    private String getBody(String content_id, String tab_id, ResourceBundle resources){
         String body = "<body onload=\"show_element('" + content_id + "', '" + tab_id + "')\">" +
-                getContainer() +
+                getContainer(resources) +
                 "</body>";
         return body;
     }
 
-    private String getContainer(){
+    private String getContainer(ResourceBundle resources){
         String container = "<div class=\"container\">" +
                 getNavigation() +
-                getMain() +
+                getMain(resources) +
                 "</container>";
         return container;
     }
@@ -139,61 +158,73 @@ public class ItemCard extends HttpServlet{
         return navigation;
     }
 
-    private String getMain(){
+    private String getMain(ResourceBundle resources){
         String mainContent = "<div class=\"main\">" +
-                getProductName() +
-                getProduct() + "</div>";
+                getProductName(resources) +
+                getProduct(resources) + "</div>";
         return mainContent;
     }
 
-    private String getProductName(){
-        String productName = "<h1>Product Name</h1>";
-        return  productName;
+    private String getProductName(ResourceBundle resources){
+        String productName = resources.getString("product_name");
+        String productHeader = "<h1>" + productName + "</h1>";
+        return  productHeader;
     }
 
-    private String getProduct() {
+    private String getProduct(ResourceBundle resources) {
         String product = "<div id='product'>" +
-                getProductHeader() +
-                getProductTabsHeaders() +
-                getProductDescription() +
-                getProductInformation() +
-                getProductRewiews() + "</div>";
+                getProductHeader(resources) +
+                getProductTabsHeaders(resources) +
+                getProductDescription(resources) +
+                getProductInformation(resources) +
+                getProductRewiews(resources) + "</div>";
         return product;
     }
 
-    private String getProductHeader(){
+    private String getProductHeader(ResourceBundle resources){
+        String productPrice = resources.getString("product_price");
+        String productShortDescription = resources.getString("product_short_description");
+        String toCart = resources.getString("to_cart");
         String productHeader = "<div class=\"product_header\">\n" +
                 "            <img src=\"https://s199f.storage.yandex.net/rdisk/855451bbb49d382d48629e06945257a2c842dbd50d0014bd21af5048bd25b19a/59d18b96/WonbNbs60kDoqDWsBC6cYYSQuQhgzXuWmI7IUNjBg8qBFSwacwSFmG6p8GawtGC67PjWnsLTgXGGO3F3u_zZlw==?uid=0&filename=2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&fsize=707492&hid=e961642f6ea3731978e46ddf197bfb63&media_type=image&tknv=v2&etag=e23e1954bba72a71e6087c87cf082c2a&rtoken=oalE6NII3KTB&force_default=no&ycrid=na-9495da2d654dcb77bf9ffbca0af8be3e-downloader17h&ts=55a85a8299180&s=5c232135116b0d3ae9ad9cbc2dd1ba91344882ea696e9585c1f66fa7618c3799&pb=U2FsdGVkX1_iNz5yWibjmWZ5q6BFqKyvSSYGlKo1TImZ7DWixR89xM5xJByPS0nVnEuuVX7BWw3PNTBS3NGQR9H1idNCpL92q-kvK9qtQzU=\" alt=\"Картинка товара\" />\n" +
                 "            <div class=\"product_price\">\n" +
-                "              <b>Цена: 1000р</b>\n" +
-                "              <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также сложившаяся структура организации требуют определения и уточнения систем массового участия.</p>\n" +
-                "              <button>В корзину</button></div></div>";
+                "              <b>" + productPrice + "</b>\n" +
+                "              <p>" + productShortDescription + "</p>\n" +
+                "              <button>" + toCart + "</button></div></div>";
         return productHeader;
     }
 
-    private String getProductTabsHeaders(){
+    private String getProductTabsHeaders(ResourceBundle resources){
+
+        String descriptionTabHeader = resources.getString("description_tab_header");
+        String informationTabHeader = resources.getString("information_tab_header");
+        String rewiewsTabHeader = resources.getString("rewiews_tab_header");
+
         String productTabsHeaders = "<div class=\"product_tab_menu\">\n" +
-                "          <button class=\"product_tab_menu_link\" id='description_tab' onclick=\"show_element('product_description', 'description_tab')\">Описание</button>\n" +
-                "          <button class=\"product_tab_menu_link\" id='information_tab' onclick=\"show_element('product_information', 'information_tab')\">Характеристки</button>\n" +
-                "          <button class=\"product_tab_menu_link\" id='rewiews_tab' onclick=\"show_element('product_reviews', 'rewiews_tab')\">Отзывы</button></div>";
+                "          <button class=\"product_tab_menu_link\" id='description_tab' onclick=\"show_element('product_description', 'description_tab')\">" + descriptionTabHeader + "</button>\n" +
+                "          <button class=\"product_tab_menu_link\" id='information_tab' onclick=\"show_element('product_information', 'information_tab')\">" + informationTabHeader + "</button>\n" +
+                "          <button class=\"product_tab_menu_link\" id='rewiews_tab' onclick=\"show_element('product_reviews', 'rewiews_tab')\">" + rewiewsTabHeader + "</button></div>";
         return productTabsHeaders;
     }
 
-    private String getProductDescription(){
+    private String getProductDescription(ResourceBundle resources){
+        String descriptionTabContent = resources.getString("description_tab_content");
         String productDescription = "<div class=\"tab_content\" id='product_description'>\n" +
-                "          <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке форм развития. Повседневная практика показывает, что новая модель организационной деятельности в значительной степени обуславливает создание модели развития. Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение дальнейших направлений развития. </p></div>";
+                "          <p>" + descriptionTabContent + "</p></div>";
         return productDescription;
     }
 
-    private String getProductInformation(){
+    private String getProductInformation(ResourceBundle resources){
+        String informationTabContent = resources.getString("information_tab_content");
         String productInformation = "<div class=\"tab_content\" id='product_information'>\n" +
-                "          <p>С другой стороны укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности требуют определения и уточнения направлений прогрессивного развития. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий требуют определения и уточнения систем массового участия. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p></div>";
+                "          <p>" + informationTabContent + "</p></div>";
         return productInformation;
     }
 
-    private  String getProductRewiews(){
+    private  String getProductRewiews(ResourceBundle resources){
+        String rewiewstabContent = resources.getString("rewiews_tab_content");
         String productRewiews = "<div class=\"tab_content\" id='product_reviews'>\n" +
-                "          <p>Задача организации, в особенности же новая модель организационной деятельности требуют определения и уточнения форм развития. Повседневная практика показывает, что консультация с широким активом влечет за собой процесс внедрения и модернизации новых предложений. Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки модели развития. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения существенных финансовых и административных условий.</p></div>";
+                "          <p>" + rewiewstabContent + "</p></div>";
         return productRewiews;
     }
 }
