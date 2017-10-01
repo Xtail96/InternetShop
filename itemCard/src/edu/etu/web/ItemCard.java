@@ -102,9 +102,9 @@ public class ItemCard extends HttpServlet{
                 ".container .main .tab_content{display: none;height: auto;padding: 5px 15px;border: 1px solid #dfdfdf;background-color: #fff;margin-top: -3px;font-size: 150%;}\n" +
                 ".container .navigation{height: 5%;}\n" +
                 ".container .navigation .language_menu{float: right;height: 100%;}\n" +
-                ".container .navigation .language_menu button{background-color: #fff;color: #333;border: 1px solid #dfdfdf;border-radius: 3px;}\n" +
-                ".container .navigation .language_menu button:hover{background-color: #eee;color: #333;}\n" +
-                ".container .navigation .language_menu button:active{background-color: #dfdfdf;color: #333;}\n" +
+                ".container .navigation .language_menu a{background-color: #fff;color: #333;border: 1px solid #dfdfdf;border-radius: 3px;padding: 5px;text-decoration: none;}\n" +
+                ".container .navigation .language_menu a:hover{background-color: #eee;color: #333;}\n" +
+                ".container .navigation .language_menu a:active{background-color: #dfdfdf;color: #333;}\n" +
                 "</style>";
         return styles;
     }
@@ -152,9 +152,9 @@ public class ItemCard extends HttpServlet{
 
     private String getNavigation(){
         String navigation = "<div class=\"navigation\"><div class=\"language_menu\">\n" +
-                "        <button>Ru</button>\n" +
-                "        <button>En</button>\n" +
-                "        <button>Jp</button></div></div>";
+                "        <a href=\"?lang=ru\" title=\"Русская версия страницы\">Ru</a>\n" +
+                "        <a href=\"?lang=en\" title=\"English version\">En</a>\n" +
+                "        <a href=\"?lang=ru\" title=\"Русская версия страницы\">Jp</a></div></div>";
         return navigation;
     }
 

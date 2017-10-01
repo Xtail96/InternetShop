@@ -121,19 +121,21 @@
       height: 100%;
     }
 
-    .container .navigation .language_menu button{
+    .container .navigation .language_menu a{
       background-color: #fff;
       color: #333;
       border: 1px solid #dfdfdf;
       border-radius: 3px;
+      padding: 5px;
+      text-decoration: none;
     }
 
-    .container .navigation .language_menu button:hover{
+    .container .navigation .language_menu a:hover{
       background-color: #eee;
       color: #333;
     }
 
-    .container .navigation .language_menu button:active{
+    .container .navigation .language_menu a:active{
       background-color: #dfdfdf;
       color: #333;
     }
@@ -174,9 +176,9 @@
   <div class="container">
     <div class="navigation">
       <div class="language_menu">
-        <button>Ru</button>
-        <button>En</button>
-        <button>Jp</button>
+        <a href="?lang=ru" title="Русская версия страницы">Ru</a>
+        <a href="?lang=en" title="English version">En</a>
+        <a href="?lang=ru" title="Русская версия страницы">Jp</a>
       </div>
     </div>
     <div class="main">
