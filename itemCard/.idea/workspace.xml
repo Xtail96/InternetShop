@@ -57,7 +57,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ItemCard.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ItemCard.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="370">
@@ -74,7 +74,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="strings_nl.properties" pinned="false" current-in-tab="false">
+          <file leaf-file-name="strings_nl.properties" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/strings_nl.properties">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
@@ -111,11 +111,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="strings_ru.properties" pinned="false" current-in-tab="true">
+          <file leaf-file-name="strings_ru.properties" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/strings_ru.properties">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="180">
-                  <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+                  <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -124,11 +124,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="strings_en.properties" pinned="false" current-in-tab="false">
+          <file leaf-file-name="strings_en.properties" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/strings_en.properties">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+                <state relative-caret-position="300">
+                  <caret line="20" column="650" lean-forward="false" selection-start-line="20" selection-start-column="650" selection-end-line="20" selection-end-column="650" />
                   <folding />
                 </state>
               </provider>
@@ -169,10 +169,10 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/out/artifacts/itemCard_war_exploded/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/strings_ru.properties" />
-        <option value="$PROJECT_DIR$/src/strings_en.properties" />
-        <option value="$PROJECT_DIR$/src/strings_nl.properties" />
         <option value="$PROJECT_DIR$/src/edu/etu/web/ItemCard.java" />
+        <option value="$PROJECT_DIR$/src/strings_ru.properties" />
+        <option value="$PROJECT_DIR$/src/strings_nl.properties" />
+        <option value="$PROJECT_DIR$/src/strings_en.properties" />
       </list>
     </option>
   </component>
@@ -774,12 +774,12 @@
       <workItem from="1506935899570" duration="1324000" />
       <workItem from="1506938273904" duration="747000" />
       <workItem from="1506943755853" duration="268000" />
-      <workItem from="1506944763749" duration="881000" />
+      <workItem from="1506944763749" duration="1197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21649000" />
+    <option name="totallyTimeSpent" value="21965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -804,7 +804,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21459228" sideWeight="0.65170556" order="0" side_tool="false" content_ui="combo" />
@@ -1436,21 +1436,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/strings_en.properties">
+    <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="370">
+          <caret line="159" column="26" lean-forward="true" selection-start-line="159" selection-start-column="26" selection-end-line="159" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getStyles#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getScripts#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getBody#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getContainer#0;class#ItemCard#0" expanded="false" />
+          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/strings_ru.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1469,19 +1473,15 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
+    <entry file="file://$PROJECT_DIR$/src/strings_en.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="159" column="26" lean-forward="true" selection-start-line="159" selection-start-column="26" selection-end-line="159" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getStyles#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getScripts#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getBody#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getContainer#0;class#ItemCard#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="650" lean-forward="false" selection-start-line="20" selection-start-column="650" selection-end-line="20" selection-end-column="650" />
+          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
   </component>
