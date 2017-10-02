@@ -22,10 +22,6 @@
                   <caret line="185" column="6" lean-forward="false" selection-start-line="185" selection-start-column="6" selection-end-line="185" selection-end-column="6" />
                   <folding>
                     <marker date="1506938218000" expanded="true" signature="8886:8900" ph="..." />
-                    <marker date="1506938218000" expanded="true" signature="8886:8914" ph="..." />
-                    <marker date="1506938218000" expanded="true" signature="8886:8925" ph="..." />
-                    <marker date="1506938218000" expanded="true" signature="8886:8934" ph="..." />
-                    <marker date="1506938218000" expanded="true" signature="8886:8942" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -34,8 +30,8 @@
           <file leaf-file-name="ItemCard.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="392">
-                  <caret line="104" column="137" lean-forward="false" selection-start-line="104" selection-start-column="137" selection-end-line="104" selection-end-column="137" />
+                <state relative-caret-position="432">
+                  <caret line="32" column="65" lean-forward="false" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
@@ -71,27 +67,27 @@
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="strings_ru.properties" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/strings_ru.properties">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-                  <folding />
-                </state>
-              </provider>
               <provider editor-type-id="ResourceBundle">
                 <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="225">
+                  <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+                  <folding />
+                </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="strings_en.properties" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/strings_en.properties">
+              <provider editor-type-id="ResourceBundle">
+                <state />
+              </provider>
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
                   <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
                   <folding />
                 </state>
-              </provider>
-              <provider editor-type-id="ResourceBundle">
-                <state />
               </provider>
             </entry>
           </file>
@@ -128,8 +124,8 @@
         <option value="$PROJECT_DIR$/out/artifacts/itemCard_war_exploded/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/strings_ru.properties" />
-        <option value="$PROJECT_DIR$/src/edu/etu/web/ItemCard.java" />
         <option value="$PROJECT_DIR$/src/strings_en.properties" />
+        <option value="$PROJECT_DIR$/src/edu/etu/web/ItemCard.java" />
       </list>
     </option>
   </component>
@@ -165,6 +161,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -275,7 +272,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -759,12 +755,13 @@
       <workItem from="1506899057623" duration="394000" />
       <workItem from="1506934085940" duration="611000" />
       <workItem from="1506935899570" duration="1324000" />
-      <workItem from="1506938273904" duration="712000" />
+      <workItem from="1506938273904" duration="747000" />
+      <workItem from="1506943755853" duration="200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20465000" />
+    <option name="totallyTimeSpent" value="20700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -792,7 +789,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20886981" sideWeight="0.65170556" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21173105" sideWeight="0.65170556" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2639485" sideWeight="0.34829444" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -892,10 +889,6 @@
           <caret line="169" column="50" lean-forward="false" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
           <folding>
             <marker date="1506938218000" expanded="true" signature="8886:8900" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8914" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8925" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8934" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8942" ph="..." />
           </folding>
         </state>
       </provider>
@@ -932,10 +925,6 @@
           <caret line="169" column="50" lean-forward="false" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
           <folding>
             <marker date="1506938218000" expanded="true" signature="8886:8900" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8914" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8925" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8934" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8942" ph="..." />
           </folding>
         </state>
       </provider>
@@ -995,10 +984,6 @@
           <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
           <folding>
             <marker date="1506938218000" expanded="true" signature="8886:8900" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8914" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8925" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8934" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8942" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1009,10 +994,6 @@
           <caret line="169" column="50" lean-forward="false" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
           <folding>
             <marker date="1506938218000" expanded="true" signature="8886:8900" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8914" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8925" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8934" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8942" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1081,10 +1062,6 @@
           <caret line="169" column="50" lean-forward="false" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
           <folding>
             <marker date="1506938218000" expanded="true" signature="8886:8900" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8914" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8925" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8934" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8942" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1144,10 +1121,6 @@
           <caret line="123" column="50" lean-forward="false" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
           <folding>
             <marker date="1506938218000" expanded="true" signature="8886:8900" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8914" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8925" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8934" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8942" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1204,10 +1177,6 @@
           <caret line="185" column="6" lean-forward="false" selection-start-line="185" selection-start-column="6" selection-end-line="185" selection-end-column="6" />
           <folding>
             <marker date="1506938218000" expanded="true" signature="8886:8900" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8914" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8925" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8934" ph="..." />
-            <marker date="1506938218000" expanded="true" signature="8886:8942" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1234,20 +1203,8 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="104" column="137" lean-forward="false" selection-start-line="104" selection-start-column="137" selection-end-line="104" selection-end-column="137" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1259,6 +1216,18 @@
         <state relative-caret-position="270">
           <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="32" column="65" lean-forward="false" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
+            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

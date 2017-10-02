@@ -22,16 +22,15 @@ public class ItemCard extends HttpServlet{
 
         final Map<String, String[]> params = request.getParameterMap();
 
-        Cookie langCookie = null;
-        if(params.containsKey("lang"))
+        String language = "undefined";
+        if(!params.containsKey("lang"))
         {
-            langCookie = new Cookie("lang", params.get("lang")[0]);
+            language = "ru";
         } else {
-            langCookie = new Cookie("lang", "ru");
+            language = params.get("lang")[0];
         }
-        response.addCookie(langCookie);
 
-        Locale locale = new Locale.Builder().setLanguage(langCookie.getValue()).build();
+        Locale locale = new Locale.Builder().setLanguage(language).build();
         ResourceBundle resources = ResourceBundle.getBundle("strings", locale);
 
         response.setContentType("text/html; charset=UTF-8");
