@@ -156,7 +156,7 @@ public class ItemCard extends HttpServlet{
         String navigation = "<div class=\"navigation\"><div class=\"language_menu\">\n" +
                 "        <a href=\"?lang=ru\" title=\"Русская версия страницы\">Ru</a>\n" +
                 "        <a href=\"?lang=en\" title=\"English version\">En</a>\n" +
-                "        <a href=\"?lang=ru\" title=\"Русская версия страницы\">Jp</a></div></div>";
+                "        <a href=\"?lang=nl\" title=\"Versie voor Nederland\">Nl</a></div></div>";
         return navigation;
     }
 
