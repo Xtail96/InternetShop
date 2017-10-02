@@ -102,6 +102,9 @@ public class ItemCard extends HttpServlet{
                 ".container .main .tab_content{display: none;height: auto;padding: 5px 15px;border: 1px solid #dfdfdf;background-color: #fff;margin-top: -3px;font-size: 150%;}\n" +
                 ".container .main .tab_content ul{font-size: 100%;list-style: none;}\n" +
                 ".container .main .tab_content ul li{border-bottom: 1px solid #dfdfdf;}\n" +
+                ".container .main .tab_content .rewiews_list li{border: 1px solid transparent;border-radius: 10px;background-color: #eee;padding: 25px;\n" +
+                "        margin-bottom: 5px;\n" +
+                "    }" +
                 ".container .navigation{height: 5%;}\n" +
                 ".container .navigation .language_menu{float: right;height: 100%;}\n" +
                 ".container .navigation .language_menu a{background-color: #fff;color: #333;border: 1px solid #dfdfdf;border-radius: 3px;padding: 5px;text-decoration: none;}\n" +
@@ -228,9 +231,24 @@ public class ItemCard extends HttpServlet{
     }
 
     private  String getProductRewiews(ResourceBundle resources){
-        String rewiewstabContent = resources.getString("rewiews_tab_content");
         String productRewiews = "<div class=\"tab_content\" id='product_reviews'>\n" +
-                "          <p>" + rewiewstabContent + "</p></div>";
+                "          <ul class=\"rewiews_list\">\n" +
+                "                <li>\n" +
+                "                    <h4>" + resources.getString("rewiews_tab_rewiew1_name") + "</h4>\n" +
+                "                    <b>" + resources.getString("rewiews_tab_rewiew1_rate") + "</b>\n" +
+                "                    <p>"+ resources.getString("rewiews_tab_rewiew1_content") + "</p>\n" +
+                "                </li>\n" +
+                "                <li>\n" +
+                "                    <h4>" + resources.getString("rewiews_tab_rewiew2_name") + "</h4>\n" +
+                "                    <b>" + resources.getString("rewiews_tab_rewiew2_rate") + "</b>\n" +
+                "                    <p>"+ resources.getString("rewiews_tab_rewiew2_content") + "</p>\n" +
+                "                </li>\n" +
+                "                <li>\n" +
+                "                    <h4>" + resources.getString("rewiews_tab_rewiew3_name") + "</h4>\n" +
+                "                    <b>" + resources.getString("rewiews_tab_rewiew3_rate") + "</b>\n" +
+                "                    <p>"+ resources.getString("rewiews_tab_rewiew3_content") + "</p>\n" +
+                "                </li>\n" +
+                "            </ul></div>";
         return productRewiews;
     }
 }
