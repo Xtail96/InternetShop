@@ -60,12 +60,11 @@
           <file leaf-file-name="ItemCard.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="103" column="168" lean-forward="true" selection-start-line="103" selection-start-column="168" selection-end-line="103" selection-end-column="168" />
+                <state relative-caret-position="412">
+                  <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
-                    <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -757,12 +756,12 @@
       <workItem from="1506935899570" duration="1324000" />
       <workItem from="1506938273904" duration="747000" />
       <workItem from="1506943755853" duration="268000" />
-      <workItem from="1506944763749" duration="215000" />
+      <workItem from="1506944763749" duration="322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20983000" />
+    <option name="totallyTimeSpent" value="21090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -931,7 +930,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -997,7 +995,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1172,7 +1169,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1224,7 +1220,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1432,12 +1427,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/etu/web/ItemCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="103" column="168" lean-forward="true" selection-start-line="103" selection-start-column="168" selection-end-line="103" selection-end-column="168" />
+        <state relative-caret-position="412">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getContentId#0;class#ItemCard#0" expanded="false" />
-            <element signature="method#getMeta#0;class#ItemCard#0" expanded="false" />
           </folding>
         </state>
       </provider>

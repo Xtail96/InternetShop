@@ -78,7 +78,7 @@ public class ItemCard extends HttpServlet{
     }
 
     private String getMeta() {
-        String meta = "<meta charset=\"utf-8\" />";
+        String meta = "<meta charset=\"utf-8\" /><title>Интернет магазин</title>";
         return  meta;
     }
 
