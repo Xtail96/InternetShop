@@ -99,11 +99,9 @@ public class ItemCard extends HttpServlet{
                 ".container .main .product_tab_menu .product_tab_menu_link{background-color: #eee;}\n" +
                 ".container .main .product_tab_menu .product_tab_menu_link_active{background-color: #fff;}\n" +
                 ".container .main .tab_content{display: none;height: auto;padding: 5px 15px;border: 1px solid #dfdfdf;background-color: #fff;margin-top: -3px;font-size: 150%;}\n" +
-                ".container .main .tab_content ul{font-size: 100%;list-style: none;}\n" +
+                ".container .main .tab_content ul{font-size: 100%;list-style: none;padding-right: 50px;}\n" +
                 ".container .main .tab_content ul li{border-bottom: 1px solid #dfdfdf;}\n" +
-                ".container .main .tab_content .rewiews_list li{border: 1px solid transparent;border-radius: 10px;background-color: #eee;padding: 25px;\n" +
-                "        margin-bottom: 5px;\n" +
-                "    }" +
+                ".container .main .tab_content .rewiews_list li{border: 1px solid transparent;border-radius: 10px;background-color: #eee;padding: 25px;margin-top: 25px;}\n" +
                 ".container .navigation{height: 5%;}\n" +
                 ".container .navigation .language_menu{float: right;height: 100%;}\n" +
                 ".container .navigation .language_menu a{background-color: #fff;color: #333;border: 1px solid #dfdfdf;border-radius: 3px;padding: 5px;text-decoration: none;}\n" +
