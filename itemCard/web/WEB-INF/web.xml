@@ -3,6 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <welcome-file-list>
+        <welcome-file>index.item_page</welcome-file>
+    </welcome-file-list>
 
     <servlet>
         <servlet-name>ItemCard</servlet-name>
@@ -10,13 +13,13 @@
 
         <init-param>
             <param-name>activeTab</param-name>
-            <param-value>description_tab</param-value>
+            <param-value>information_tab</param-value>
         </init-param>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>ItemCard</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/ItemCard</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>
