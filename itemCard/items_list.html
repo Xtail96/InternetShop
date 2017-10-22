@@ -1,0 +1,271 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    body{
+      background-color: #eee;
+    }
+    .container{
+      /*background-color: #fff;*/
+      width: 100%;
+      height: 100%;
+
+      max-width: 1920px;
+      min-width: 1366px;
+      margin: auto;
+    }
+    .navigaton{
+      height: 50px;
+      padding: 15px;
+    }
+
+    .navigation .card{
+      background-color: #a52a2a;
+      color: #fff;
+      padding: 5px;
+      border: 1px solid transparent;
+      box-shadow: 0;
+      font-size: 100%;
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px 1px #dfdfdf;
+    }
+
+    .navigation .card:hover{
+      background-color: #fa8072;
+    }
+
+    .navigation .history{
+      background-color: #333;
+      color: #fff;
+      padding: 5px;
+      border: 1px solid transparent;
+      box-shadow: 0;
+      font-size: 100%;
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px 1px #dfdfdf;
+    }
+
+    .navigation .history:hover{
+      background-color: #dfdfdf;
+    }
+
+    .navigation .language_menu{
+      float: right;
+      height: 100%;
+    }
+
+    .navigation .language_menu a{
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #dfdfdf;
+      border-radius: 3px;
+      padding: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .navigation .language_menu a:hover{
+      text-decoration: underline;
+    }
+
+    .main{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 5px;
+      box-shadow: 10px 10px 10px 0px #dfdfdf;
+    }
+
+    .main .left{
+      width: 72%;
+    }
+    .main .right{
+      width: 25%;
+      float: right;
+    }
+
+    .main h1{
+      text-align: center;
+      font-size: 250%;
+    }
+
+    .main .items_container{
+      font-size: 100%;
+    }
+
+    .main .items_container .item{
+      border-radius: 5px;
+      background-color: #eee;
+      padding: 15px;
+      margin-bottom: 15px;
+      min-height: 300px;
+      width: auto;
+    }
+
+    
+
+    .main .items_container .item a{
+      font-weight: bold;
+    }
+
+    .main .items_container .item h3{
+      font-size: 200%;
+    }
+
+    .main .items_container .item .buy{
+      border: 1px solid transparent;
+      background-color: #a52a2a;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 150%;
+    }
+
+    .main .items_container .item .buy:hover{
+      background-color: #fa8072;
+    }
+
+    .main .items_container .item img{
+      float: left;
+      margin-right: 15px;
+      height: 100%;
+      width: auto;
+      max-height: 300px;
+      max-width: 300px;
+    }
+
+    .main .filter-form{
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .footer{
+      border-top: 1px solid #dfdfdf;
+      width: 90%;
+      max-width: 1920px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      color: #333;
+      padding-bottom: 50px;
+    }
+  </style>
+
+  <script type="text/javascript">  
+  </script>
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="navigation">
+      <button class="history">
+          История покупок
+      </button>
+      <button class="card">
+          Корзина
+      </button>
+
+      <div class="language_menu">
+        <a>Ru</a>
+        <a>En</a>
+        <a>Jp</a>
+      </div>
+    </div>
+
+
+    <div class="main">
+      <h1>Название магазина</h1>
+
+      <div class="right">
+        <div class="filter-form">
+                <form method="GET" id="filter">
+                  <h3>Параметры</h3>
+                  <p>
+                    <b>Цена:</b>
+                    <br />
+                    <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+                    <b>до</b>
+                    <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+                  </p>                        
+                  
+                  <p>
+                    <b>Частота:</b>
+                    <br />
+                    <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+                    <b>до</b> 
+                    <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+                  </p>
+
+                  <p>
+                    <b>Число ядер:</b>
+                    <br /> 
+                    <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+                    <b>до</b>
+                    <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+                  </p>
+
+                  <p>
+                    <b>Socket</b>
+                    <br />
+                    <input type="checkbox" name="Socket" onclick="setCheckParam(this)">AM4
+                    <br />
+                    <input type="checkbox" name="Socket" onclick="setCheckParam(this)">TR4
+                    <br />
+                    <input type="checkbox" name="Socket" onclick="setCheckParam(this)">LGA1151
+                  </p>
+
+                  <p>
+                    <b>Vendor</b>
+                    <br />
+                    <input type="checkbox" name="Vendor" onclick="setCheckParam(this)">Intel
+                    <br />
+                    <input type="checkbox" name="Vendor" onclick="setCheckParam(this)">AMD
+                  </p>
+
+                  <button type="submit">Apply</button>                      
+              </form>
+              </div>
+            </div>
+
+      <div class="left">
+
+      <div class="items_container">
+        <div class="item">
+            <img src="image" />
+            <h3>Название</h3>
+            <button class="buy">В Корзину</button>
+            <p>Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки дальнейших направлений развития. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Товарищи! укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки модели развития. <a href="#">Подробнее</a></p>
+        </div>
+
+        <div class="item">
+            <img src="image" />
+            <h3>Название</h3>
+            <button class="buy">В Корзину</button>
+            <p>Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки дальнейших направлений развития. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Товарищи! укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки модели развития. <a href="#">Подробнее</a></p>
+        </div>
+
+        <div class="item">
+            <img src="image" />
+            <h3>Название</h3>
+            <button class="buy">В Корзину</button>
+            <p>Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки дальнейших направлений развития. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Товарищи! укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки модели развития. <a href="#">Подробнее</a></p>
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+
+    <div class="footer">
+      <p>
+        Таким образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
