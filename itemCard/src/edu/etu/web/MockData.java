@@ -9,28 +9,28 @@ import java.util.List;
  */
 public class MockData {
 
-    private final static List<ItemPage> itemsPages;
+    private final static List<Item> itemsPages;
 
     static {
         itemsPages = new ArrayList<>();
 
-        ItemPage itemPage;
+        Item item;
 
-        itemPage = new ItemPage();
-        itemPage.setName("Name1");
-        itemsPages.add(itemPage);
+        item = new Item();
+        item.setProduct_name("Name1");
+        itemsPages.add(item);
 
 
-        itemPage = new ItemPage();
-        itemPage.setName("Name2");
-        itemsPages.add(itemPage);
+        item = new Item();
+        item.setProduct_name("Name2");
+        itemsPages.add(item);
     }
 
     public static int itemsCount() {
         return itemsPages.size();
     }
 
-    public static ItemPage getItemPage(int index) {
+    public static Item getItemPage(int index) {
         return itemsPages.get(index);
     }
 }

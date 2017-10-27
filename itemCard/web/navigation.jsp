@@ -8,26 +8,31 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="java.util.ResourceBundle"%>
 <%@page import="java.util.Locale"%>
-
-<%
-    Cookie[] cookies = request.getCookies();
-    String lang = "ru";
-    if (cookies!=null){
-        for (Cookie c : cookies) {
-            String name = c.getName();
-            if (name.equals("lang")){
-                lang = c.getValue();
-                break;
-            }
-        }
+<script>
+    function goHome() {
+        window.location.href = "/";
     }
-    Locale locale = new Locale.Builder().setLanguage(lang.substring(0,2)).setRegion(lang.substring(2,4)).build();
-    ResourceBundle res = ResourceBundle.getBundle("langs", locale);
-%>
-<div id="navigation">
-    <div class="language_menu">
-        <a href="?lang=ru" title="Русская версия страницы">Ru</a>
-        <a href="?lang=en" title="English version">En</a>
-        <a href="?lang=ru" title="Русская версия страницы">Jp</a>
+</script>
+
+<div class="navigation">
+    <div class="navigation_container">
+        <button onclick="goHome()">
+            Каталог
+        </button>
+
+        <button>
+            История покупок
+        </button>
+        <button class="card">
+            Корзина
+        </button>
+
+        <div class="language_menu">
+            <a>Ru</a>
+            <a>En</a>
+            <a>Jp</a>
+        </div>
+
+        <h1 class="title">Microcontrollers Shop</h1>
     </div>
 </div>

@@ -9,21 +9,8 @@
 <%@page import="java.util.ResourceBundle"%>
 <%@page import="java.util.Locale"%>
 
-<%
-    Cookie[] cookies = request.getCookies();
-    String lang = "ru";
-    if (cookies!=null){
-        for (Cookie c : cookies) {
-            String name = c.getName();
-            if (name.equals("lang")){
-                lang = c.getValue();
-                break;
-            }
-        }
-    }
-    Locale locale = new Locale.Builder().setLanguage(lang.substring(0,2)).setRegion(lang.substring(2,4)).build();
-    ResourceBundle res = ResourceBundle.getBundle("langs", locale);
-%>
-<div id="footer">
-
+<div class="footer">
+    <p>
+        Таким образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.
+    </p>
 </div>

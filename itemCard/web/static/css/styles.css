@@ -1,0 +1,204 @@
+body{
+    background-color: #eee;
+    overflow: auto;
+}
+.container{
+    max-width: 1920px;
+    min-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    overflow: auto;
+}
+.navigation{
+    width: 90%;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px 5px #dfdfdf;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #dfdfdf;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.navigation .navigation_container{
+    background-color: transparent;
+    padding: 25px;
+    margin-top: auto;
+    border-radius: 5px;
+}
+
+.navigation .navigation_container .card{
+    /*color: #a52a2a;*/
+    color: #007769;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 150%;
+    margin-right: 15px;
+}
+
+.navigation .navigation_container .card:hover{
+    text-decoration: underline;
+}
+
+.navigation .navigation_container .card:active{
+    text-decoration: underline;
+    color: #004a3f;
+}
+
+.navigation .navigation_container button{
+    background-color: transparent;
+    color: #333;
+    font-size: 150%;
+    padding: 5px;
+    margin-right: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.navigation .navigation_container button:hover{
+    text-decoration: underline;
+}
+
+.navigation .navigation_container button:active{
+    text-decoration: underline;
+    color: #dfdfdf;
+}
+
+.navigation .navigation_container .title{
+    text-align: center;
+    font-size: 200%;
+}
+
+.navigation .navigation_container .language_menu{
+    float: right;
+}
+
+.navigation .navigation_container .language_menu a{
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navigation .navigation_container .language_menu a:hover{
+    text-decoration: underline;
+    background-color: #eeeeee;
+}
+
+.navigation .navigation_container .language_menu a:active{
+    background-color: #dfdfdf;
+}
+
+.main{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 5px #dfdfdf;
+    overflow: auto;
+}
+
+.main .left{
+    width: 75%;
+}
+.main .right{
+    width: 25%;
+    float: right;
+}
+
+.main h1{
+    text-align: center;
+    font-size: 250%;
+}
+
+.main .items_container{
+    font-size: 100%;
+}
+
+.main .items_container .item{
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 15px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    min-height: 300px;
+    width: auto;
+    overflow: auto;
+    box-shadow: 0px 0px 5px 3px #dfdfdf;
+}
+
+
+
+.main .items_container .item a{
+    font-weight: bold;
+}
+
+.main .items_container .item h3{
+    font-size: 150%;
+}
+
+.main .items_container .item .buy{
+    border: 1px solid transparent;
+    background-color: #007769;
+    color: #fff;
+    font-size: 150%;
+    float: right;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 1px #333;
+    cursor: pointer;
+}
+
+.main .items_container .item .buy:hover{
+    background-color: #48a697;
+}
+
+.main .items_container .item .buy:active{
+    background-color: #004a3f;
+}
+
+.main .items_container .item img{
+    float: left;
+    margin-right: 15px;
+    height: 100%;
+    width: auto;
+    max-height: 300px;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px #dfdfdf;
+}
+
+.main .items_container .item price{
+    font-size: 150%;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.main .filter-form{
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 5px 3px #dfdfdf;
+}
+
+.footer{
+    border-top: 1px solid #dfdfdf;
+    width: 90%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #333;
+    padding-bottom: 50px;
+}
