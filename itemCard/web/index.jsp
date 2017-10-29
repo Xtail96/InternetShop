@@ -36,34 +36,7 @@
         <div class="main">
             <div class="right">
                 <div class="filter-form">
-                    <form method="GET" id="filter">
-                        <h3>Параметры</h3>
-                        <p>
-                            <b>Цена:</b>
-                            <br />
-                            <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
-                            <b>до</b>
-                            <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
-                        </p>
-
-                        <p>
-                            <b>Частота:</b>
-                            <br />
-                            <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
-                            <b>до</b>
-                            <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
-                        </p>
-
-                        <p>
-                            <b>Vendor</b>
-                            <br />
-                            <input type="checkbox" name="Vendor" onclick="setCheckParam(this)">Raspberrypi
-                            <br />
-                            <input type="checkbox" name="Vendor" onclick="setCheckParam(this)">Arduino
-                        </p>
-
-                        <button type="submit">Apply</button>
-                    </form>
+                    <%@include file="filter_form.jsp"%>
                 </div>
             </div>
 
