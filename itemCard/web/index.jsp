@@ -32,7 +32,7 @@
 </head>
 <body>
     <div class="container">
-        <jsp:include page="navigation.jsp"></jsp:include>
+        <%@include file="navigation.jsp"%>
         <div class="main">
             <div class="right">
                 <div class="filter-form">
@@ -90,7 +90,7 @@
 
         </div>
 
-        <jsp:include page="footer.jsp"></jsp:include>
+        <%@include file="footer.jsp"%>
     </div>
 </body>
 </html>

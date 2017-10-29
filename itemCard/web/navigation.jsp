@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="java.util.ResourceBundle"%>
 <%@page import="java.util.Locale"%>
+<%@ page import="java.util.Map" %>
 <script>
     function goHome() {
         window.location.href = "/";
@@ -17,14 +18,14 @@
 <div class="navigation">
     <div class="navigation_container">
         <button onclick="goHome()">
-            Каталог
+            <%=shopResources.getString("catalog")%>
         </button>
 
         <button>
-            История покупок
+            <%=shopResources.getString("history")%>
         </button>
         <button class="card">
-            Корзина
+            <%=shopResources.getString("cart")%>
         </button>
 
         <div class="language_menu">
@@ -33,6 +34,8 @@
             <a>Jp</a>
         </div>
 
-        <h1 class="title">Microcontrollers Shop</h1>
+        <h1 class="title">
+            <%=shopResources.getString("title")%>
+        </h1>
     </div>
 </div>

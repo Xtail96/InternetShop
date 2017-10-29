@@ -7,16 +7,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="item">
-    <button class="buy">В Корзину</button>
+    <button class="buy"><%=shopResources.getString("to_cart")%></button>
     <img src="<%=url%>" alt="<%=product_name%>"/>
     <h3><%=product_name%></h3>
-    <b class="price">Цена:<%=productPrice%></b>
+    <b class="price"><%=shopResources.getString("price")%><%=productPrice%></b>
     <br />
     <p>
-        Тактовая частота = <%=frequency%> ГГц
+        <%=shopResources.getString("frequency")%> <%=frequency%>
         <br />
-        RAM = <%=ram_size%> Гб <%=ram_type%>
+        <%=shopResources.getString("ram")%> <%=ram_size%> <%=ram_type%>
         <br />
-        <a href="${pageContext.request.contextPath}/item?id=<%=item.getId()%>&img=<%=url%>&lang=<%=lang%>">Подробнее</a>
+        <a href="${pageContext.request.contextPath}/item?id=<%=item.getId()%>&img=<%=url%>&lang=<%=lang%>">
+            <%=shopResources.getString("more")%>
+        </a>
     </p>
 </div>
