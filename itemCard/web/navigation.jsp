@@ -25,12 +25,13 @@
     function goHome() {
         window.location.href = "/";
     }
+
     function changeLanguage(lang) {
         let href = window.location.href;
         <%
         if(params.containsKey("lang")) {
         %>
-            //lang = params.get("lang")[0];
+            href = "?lang=" + lang;
         <%
         }
         else if(params.size() > 0)
