@@ -14,18 +14,30 @@
         window.location.href = "/";
     }
 </script>
+<%
+    final Map<String, String[]> params = request.getParameterMap();
+
+    String lang = "";
+    if(!params.containsKey("lang")) {
+        lang = "ru";
+    } else {
+        lang = params.get("lang")[0];
+    }
+    Locale locale = new Locale.Builder().setLanguage(lang).build();
+    ResourceBundle navigationResources = ResourceBundle.getBundle("strings", locale);
+%>
 
 <div class="navigation">
     <div class="navigation_container">
         <button onclick="goHome()">
-            <%=shopResources.getString("catalog")%>
+            <%=navigationResources.getString("catalog")%>
         </button>
 
         <button>
-            <%=shopResources.getString("history")%>
+            <%=navigationResources.getString("history")%>
         </button>
         <button class="card">
-            <%=shopResources.getString("cart")%>
+            <%=navigationResources.getString("cart")%>
         </button>
 
         <div class="language_menu">
@@ -35,7 +47,7 @@
         </div>
 
         <h1 class="title">
-            <%=shopResources.getString("title")%>
+            <%=navigationResources.getString("title")%>
         </h1>
     </div>
 </div>

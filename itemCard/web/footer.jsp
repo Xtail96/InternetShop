@@ -8,13 +8,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="java.util.ResourceBundle"%>
 <%@page import="java.util.Locale"%>
+<%@ page import="java.util.Map" %>
 
 <%
+    final Map<String, String[]> params = request.getParameterMap();
 
+    String lang = "";
+    if(!params.containsKey("lang")) {
+        lang = "ru";
+    } else {
+        lang = params.get("lang")[0];
+    }
+    Locale locale = new Locale.Builder().setLanguage(lang).build();
+    ResourceBundle footerResources = ResourceBundle.getBundle("strings", locale);
 %>
 
 <div class="footer">
     <p>
-        <%=shopResources.getString("footer")%>
+        <%=footerResources.getString("footer")%>
     </p>
 </div>
