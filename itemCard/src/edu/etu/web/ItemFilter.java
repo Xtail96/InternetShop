@@ -6,13 +6,32 @@ import java.util.*;
  * Created by Xtail on 29.10.17.
  */
 public class ItemFilter {
-
     private Integer price_low = 0;
     private Integer price_high = 100000;
     private Double frequency_low = 0.0;
     private Double frequency_high = 100.0;
     private List<String> vendors = Arrays.asList("arduino", "raspberrypi");
+    //private List<String> vendors = new ArrayList<>();
 
+    public Integer getPrice_low() {
+        return price_low;
+    }
+
+    public Integer getPrice_high() {
+        return price_high;
+    }
+
+    public Double getFrequency_low() {
+        return frequency_low;
+    }
+
+    public Double getFrequency_high() {
+        return frequency_high;
+    }
+
+    public List<String> getVendors() {
+        return vendors;
+    }
 
     public ItemFilter(Map<String, String[]> params) {
         if (params.containsKey("price_low")) {
@@ -56,6 +75,7 @@ public class ItemFilter {
         }
 
         if (params.containsKey("vendors")) {
+            vendors = new ArrayList<>();
             for (String s : params.get("vendors")) {
                 switch (s) {
                     case "raspberrypi":

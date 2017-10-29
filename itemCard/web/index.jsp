@@ -19,8 +19,8 @@
     final Cookie DEFAULT_MIN_FREQUENCY_COOKIE = new Cookie("min_frequency", "0");
     final Cookie DEFAULT_MAX_FREQUENCY_COOKIE = new Cookie("max_frequency", "100");
 
-    final Cookie DEFAULT_RASPBERRYPI_COOKIE = new Cookie("vendor_raspberrypi", "true");
-    final Cookie DEFAULT_ARDUINO_COOKIE = new Cookie("vendor_arduino", "true");
+    final Cookie DEFAULT_VENDOR_RASPBERRYPI_COOKIE = new Cookie("vendors", "raspberrypi");
+    final Cookie DEFAULT_VENDOR_ARDUINO_COOKIE = new Cookie("vendors", "arduino");
 
     final Map<String, String[]> params = request.getParameterMap();
     final Map<String, Cookie> cookies = Util.mapCookiesByName(request.getCookies());
@@ -48,13 +48,42 @@
         }
 
         function applyFilters() {
-            if (document.getElementById("vendor_raspberrypi").checked) {
+            /*if (document.getElementById("vendor_raspberrypi").checked) {
                 document.getElementById("vendor_raspberrypi").disabled = true
+                document.
             }
             if (document.getElementById("vendor_arduino").checked) {
                 document.getElementById("vendor_arduino").disabled = true
             }
-            document.getElementById("filter_form").submit();
+            document.getElementById("filter_form").submit();*/
+
+            let price_low = document.getElementById("price_low").value;
+            let price_high = document.getElementById("price_high").value;
+
+            let frequency_low = document.getElementById("frequency_low").value;
+            let frequency_high = document.getElementById("frequency_high").value;
+
+            let vendor_raspberrypi = document.getElementById("vendor_raspberrypi").checked;
+            let vendor_arduino = document.getElementById("vendor_arduino").checked;
+
+            let params = "?price_low=" + price_low +
+                "&price_high=" + price_high +
+                "&frequency_low=" + frequency_low + "&frequency_high=" + frequency_high;
+
+            if(vendor_raspberrypi || vendor_arduino) {
+                if (vendor_raspberrypi)
+                    params += "&vendors=raspberrypi";
+                if (vendor_arduino)
+                    params += "&vendors=arduino";
+            }
+            else {
+                params += "&vendors=";
+            }
+
+
+            //alert(params);
+
+            window.location.href = params;
         }
     </script>
 

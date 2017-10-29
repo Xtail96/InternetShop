@@ -78,9 +78,5 @@ public class Database {
         item.setPrice(500);
         items.put(item.getId(), item);
     }
-
-    public static Map<String, Item> filteredItems(Map<String, Integer> filter){
-        return items;
-    }
     public static Map<String, Item> getAllItems(){ return  items; }
 }
