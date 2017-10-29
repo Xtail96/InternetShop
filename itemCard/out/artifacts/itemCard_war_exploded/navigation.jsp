@@ -9,11 +9,6 @@
 <%@page import="java.util.ResourceBundle"%>
 <%@page import="java.util.Locale"%>
 <%@ page import="java.util.Map" %>
-<script>
-    function goHome() {
-        window.location.href = "/";
-    }
-</script>
 <%
     final Map<String, String[]> params = request.getParameterMap();
 
@@ -26,6 +21,35 @@
     Locale locale = new Locale.Builder().setLanguage(lang).build();
     ResourceBundle navigationResources = ResourceBundle.getBundle("strings", locale);
 %>
+<script>
+    function goHome() {
+        window.location.href = "/";
+    }
+    function changeLanguage(lang) {
+        let href = window.location.href;
+        <%
+        if(params.containsKey("lang")) {
+        %>
+            //lang = params.get("lang")[0];
+        <%
+        }
+        else if(params.size() > 0)
+                {
+        %>
+            href += "&lang=" + lang;
+        <%
+        }
+        else {
+        %>
+            href += "?lang=" + lang;
+        <%
+        }
+        %>
+
+
+        window.location.href = href;
+    }
+</script>
 
 <div class="navigation">
     <div class="navigation_container">
@@ -41,9 +65,9 @@
         </button>
 
         <div class="language_menu">
-            <a>Ru</a>
-            <a>En</a>
-            <a>Jp</a>
+            <a onclick="changeLanguage('ru')">Ru</a>
+            <a onclick="changeLanguage('en')">En</a>
+            <a onclick="changeLanguage('nl')">Nl</a>
         </div>
 
         <h1 class="title">

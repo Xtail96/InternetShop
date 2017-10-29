@@ -43,9 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 
     <script type="text/javascript">
-        function changeLanguage(lang) {
-            window.location.href = "?lang=" + lang;
-        }
 
         function applyFilters() {
             /*if (document.getElementById("vendor_raspberrypi").checked) {
