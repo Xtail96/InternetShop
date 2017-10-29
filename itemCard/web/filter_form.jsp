@@ -10,26 +10,26 @@
     <p>
         <b><%=shopResources.getString("price")%></b>
         <br />
-        <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+        <input type="text" style="width: 100px" name="price_low" oninput="">
         <b><%=shopResources.getString("til")%></b>
-        <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+        <input type="text" style="width: 100px" name="price_high" oninput="">
     </p>
 
     <p>
         <b><%=shopResources.getString("frequency")%></b>
         <br />
-        <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+        <input type="text" style="width: 100px" name="frequency_low" oninput="">
         <b><%=shopResources.getString("til")%></b>
-        <input type="text" style="width: 100px" name="" oninput="cost_input(this)">
+        <input type="text" style="width: 100px" name="frequency_high" oninput="">
     </p>
 
     <p>
         <b><%=shopResources.getString("vendor")%></b>
         <br />
-        <input type="checkbox" name="Vendor" onclick="setCheckParam(this)"><%=shopResources.getString("raspberrypi")%>
+        <input type="checkbox" name="vendor_raspberrypi" onclick="setCheckParam(this)"><%=shopResources.getString("raspberrypi")%>
         <br />
-        <input type="checkbox" name="Vendor" onclick="setCheckParam(this)"><%=shopResources.getString("arduino")%>
+        <input type="checkbox" name="vendor_arduino" onclick="setCheckParam(this)"><%=shopResources.getString("arduino")%>
     </p>
 
-    <button type="submit"><%=shopResources.getString("apply")%></button>
+    <button type="submit" onclick="applyFilters()"><%=shopResources.getString("apply")%></button>
 </form>
