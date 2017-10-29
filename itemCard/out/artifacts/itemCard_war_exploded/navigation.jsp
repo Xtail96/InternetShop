@@ -31,7 +31,7 @@
         <%
         if(params.containsKey("lang")) {
         %>
-            href="?lang="+lang;
+            href = "?lang=" + lang;
         <%
         }
         else if(params.size() > 0)

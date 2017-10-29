@@ -108,6 +108,8 @@
                             Double frequency = item.getFrequency();
                             String ram_type = item.getRam_type();
                             Double ram_size = item.getRam_size();
+                            String vendor = item.getVendor();
+                            Double voltage = item.getVoltage();
                     %>
                             <%@include file="list_item.jsp"%>
                     <%

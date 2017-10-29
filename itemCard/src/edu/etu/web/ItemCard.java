@@ -48,7 +48,7 @@ public class ItemCard extends HttpServlet{
         out.print(head);
         request.getRequestDispatcher("/navigation.jsp").include(request, response);
 
-        String body = getContainer(request, storeResources, itemResources);
+        String body = getContainer(request, params, storeResources, itemResources);
         out.print(body);
 
         request.getRequestDispatcher("/footer.jsp").include(request, response);
@@ -135,21 +135,28 @@ public class ItemCard extends HttpServlet{
         return scripts;
     }
 
-    private String getContainer(HttpServletRequest request, ResourceBundle storeResources, ResourceBundle itemResources){
+    private String getContainer(HttpServletRequest request, Map<String, String[]> params, ResourceBundle storeResources, ResourceBundle itemResources){
         String container = "<div class=\"container\">" +
-                getMain(request, storeResources, itemResources) +
+                getMain(request, params, storeResources, itemResources) +
                 "</container>";
         return container;
     }
 
-    private String getMain(HttpServletRequest request, ResourceBundle storeResources, ResourceBundle itemResources){
+    private String getMain(HttpServletRequest request, Map<String, String[]> params, ResourceBundle storeResources, ResourceBundle itemResources){
+        String price = params.get("price")[0].toString();
+        String frequency = params.get("frequency")[0].toString();
+        String ram_size = params.get("ramsize")[0].toString();
+        String ram_type = params.get("ramtype")[0].toString();
+        String vendor = params.get("vendor")[0].toString();
+        String voltage = params.get("voltage")[0].toString();
+
         String mainContent = "<div class=\"main\">" +
                 "<h1>" + itemResources.getString("name") + "</h1>" +
                 "<div id='product'>" +
                 "<div class=\"product_header\">\n" +
                 "            <img src=\"" + request.getContextPath() + "/static/img/microcontrollers/" + itemResources.getString("img_name") +"\" alt=\"Картинка товара\" />\n" +
                 "            <div class=\"product_price\">\n" +
-                "              <b>" + itemResources.getString("price") + "</b>\n" +
+                "              <b>" + itemResources.getString("price") + price + "</b>\n" +
                 "              <button>" + storeResources.getString("to_cart") + "</button></div></div>" +
                 "<div class=\"product_tab_menu\">\n" +
                 "          <button class=\"product_tab_menu_link\" id='description_tab' onclick=\"show_element('product_description', 'description_tab')\">" + itemResources.getString("description_tab_header") + "</button>\n" +
@@ -159,10 +166,10 @@ public class ItemCard extends HttpServlet{
                 "          <p>" + itemResources.getString("description_content") + "</p></div>" +
                 "<div class=\"tab_content\" id='product_information'>\n" +
                 "          <ul>\n" +
-                "                <li>" + itemResources.getString("vendor") + "</li>\n" +
-                "                <li>" + itemResources.getString("frequency") + "</li>\n" +
-                "                <li>" + itemResources.getString("ram") + "</li>\n" +
-                "                <li>" + itemResources.getString("voltage") + "</li>\n" +
+                "                <li>" + itemResources.getString("vendor") + " " + vendor + "</li>\n" +
+                "                <li>" + itemResources.getString("frequency") + " " + frequency + "</li>\n" +
+                "                <li>" + itemResources.getString("ram") + " " + ram_size + " " + ram_type + "</li>\n" +
+                "                <li>" + itemResources.getString("voltage") + " " + voltage + "</li>\n" +
                 "           </ul></div>" +
                 "<div class=\"tab_content\" id='product_reviews'>\n" +
                 "          <ul class=\"rewiews_list\">\n" +
