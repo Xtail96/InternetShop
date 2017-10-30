@@ -22,14 +22,23 @@ public class ItemCard extends HttpServlet{
                          HttpServletResponse response) throws ServletException, IOException {
 
         final Map<String, String[]> params = request.getParameterMap();
+        final Map<String, Cookie> cookieMap = Util.mapCookiesByName(request.getCookies());
 
         String language = "undefined";
         if(!params.containsKey("lang"))
         {
-            language = "ru";
+            if(cookieMap.containsKey("lang"))
+            {
+                language = cookieMap.get("lang").getValue();
+            }
+            else {
+                language = "ru";
+            }
         } else {
             language = params.get("lang")[0];
         }
+        Cookie cookie = new Cookie("lang", language);
+        response.addCookie(cookie);
 
         String item_id = params.getOrDefault("id", new String[]{null})[0];
         Item item = Database.getAllItems().get(item_id);

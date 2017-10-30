@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class Database implements Serializable {
 
-    public List<Item> getItemslist() {
+    /*public List<Item> getItemslist() {
         return itemslist;
     }
 
@@ -19,14 +19,21 @@ public class Database implements Serializable {
         this.itemslist = itemslist;
     }
 
-    private List<Item> itemslist = new ArrayList<>();
+    private List<Item> itemslist = new ArrayList<>();*/
 
 
+    private static Map<String, Item> items = new HashMap<>();
+
+    public static void addItem(Item item) {
+        items.put(item.getId(), item);
+    }
+
+    public static Map<String, Item> getAllItems(){ return  items; }
+
+}
 
 
-    private final static Map<String, Item> items;
-
-    static {
+    /*static {
         items = new HashMap<>();
         Item item;
 
@@ -95,8 +102,7 @@ public class Database implements Serializable {
         item.setPrice(100);
         items.put(item.getId(), item);
     }
-    public static Map<String, Item> getAllItems(){ return  items; }
-}
+}*/
 
 /*public class Database implements Serializable {
     public List<Item> getItems() {

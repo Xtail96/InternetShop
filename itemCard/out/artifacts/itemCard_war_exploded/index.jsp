@@ -103,16 +103,24 @@
     <jsp:setProperty name="arduinouno" property="voltage" value="7.0"/>
 
     <jsp:useBean id="arduinonano" class="edu.etu.web.Item" scope="session" />
-    <jsp:setProperty name="arduinouno" property="product_name" value="Arduino Nano"/>
-    <jsp:setProperty name="arduinouno" property="id" value="arduinonano"/>
-    <jsp:setProperty name="arduinouno" property="frequency" value="0.16"/>
-    <jsp:setProperty name="arduinouno" property="microcontroller" value="ATmega328p"/>
-    <jsp:setProperty name="arduinouno" property="price" value="100"/>
-    <jsp:setProperty name="arduinouno" property="ram_size" value="0.2"/>
-    <jsp:setProperty name="arduinouno" property="ram_type" value="LPDDR2"/>
-    <jsp:setProperty name="arduinouno" property="url" value="/static/img/microcontrollers/arduino_nano.jpg"/>
-    <jsp:setProperty name="arduinouno" property="vendor" value="Arduino"/>
-    <jsp:setProperty name="arduinouno" property="voltage" value="7.0"/>
+    <jsp:setProperty name="arduinonano" property="product_name" value="Arduino Nano"/>
+    <jsp:setProperty name="arduinonano" property="id" value="arduinonano"/>
+    <jsp:setProperty name="arduinonano" property="frequency" value="0.16"/>
+    <jsp:setProperty name="arduinonano" property="microcontroller" value="ATmega328p"/>
+    <jsp:setProperty name="arduinonano" property="price" value="100"/>
+    <jsp:setProperty name="arduinonano" property="ram_size" value="0.2"/>
+    <jsp:setProperty name="arduinonano" property="ram_type" value="LPDDR2"/>
+    <jsp:setProperty name="arduinonano" property="url" value="/static/img/microcontrollers/arduino_nano.jpg"/>
+    <jsp:setProperty name="arduinonano" property="vendor" value="Arduino"/>
+    <jsp:setProperty name="arduinonano" property="voltage" value="7.0"/>
+
+    <%
+        Database.addItem(raspberrypi);
+        Database.addItem(raspberrypi2);
+        Database.addItem(raspberrypi3);
+        Database.addItem(arduinouno);
+        Database.addItem(arduinonano);
+    %>
 
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 
@@ -166,14 +174,6 @@
 
 </head>
 <body>
-<%
-    Database database = new Database();
-    database.getItemslist().add(raspberrypi);
-    database.getItemslist().add(raspberrypi2);
-    database.getItemslist().add(raspberrypi3);
-    database.getItemslist().add(arduinouno);
-    database.getItemslist().add(arduinonano);
-%>
     <div class="container">
         <jsp:include page="navigation.jsp"></jsp:include>
         <div class="main">
