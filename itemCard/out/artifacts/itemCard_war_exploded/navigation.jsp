@@ -43,6 +43,10 @@
         </button>
 
         <button>
+            <%=navigationResources.getString("authorization")%>
+        </button>
+
+        <button>
             <%=navigationResources.getString("history")%>
         </button>
         <button class="card">
