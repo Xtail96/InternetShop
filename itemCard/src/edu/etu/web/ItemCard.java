@@ -131,6 +131,10 @@ public class ItemCard extends HttpServlet{
                 "      var tab_name = document.getElementById(tab);\n" +
                 "      tab_name.className = 'product_tab_menu_link_active';\n" +
                 "    }\n" +
+                "function changeLanguage(lang) {\n" +
+                "    href = \"/item?id=" + item_id + "&lang=\" + lang;\n" +
+                "    window.location.href = href; \n" +
+                "}\n" +
                 "  </script>";
         return scripts;
     }
