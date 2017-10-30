@@ -1,12 +1,29 @@
 package edu.etu.web;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by Xtail on 23.10.17.
  */
-public class Database {
+public class Database implements Serializable {
+
+    public List<Item> getItemslist() {
+        return itemslist;
+    }
+
+    public void setItemslist(List<Item> itemslist) {
+        this.itemslist = itemslist;
+    }
+
+    private List<Item> itemslist = new ArrayList<>();
+
+
+
+
     private final static Map<String, Item> items;
 
     static {
@@ -80,3 +97,15 @@ public class Database {
     }
     public static Map<String, Item> getAllItems(){ return  items; }
 }
+
+/*public class Database implements Serializable {
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
+    List<Item> items = new ArrayList<>();
+}*/

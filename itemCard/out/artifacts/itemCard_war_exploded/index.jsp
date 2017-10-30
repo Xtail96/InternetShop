@@ -53,6 +53,67 @@
 <html>
 <head>
     <title>Store Name</title>
+
+    <jsp:useBean id="raspberrypi" class="edu.etu.web.Item" scope="session" />
+    <jsp:setProperty name="raspberrypi" property="product_name" value="Raspberry Pi"/>
+    <jsp:setProperty name="raspberrypi" property="id" value="raspberrypi"/>
+    <jsp:setProperty name="raspberrypi" property="frequency" value="1.2"/>
+    <jsp:setProperty name="raspberrypi" property="microcontroller" value="Broadcom BCM2837"/>
+    <jsp:setProperty name="raspberrypi" property="price" value="1000"/>
+    <jsp:setProperty name="raspberrypi" property="ram_size" value="1.0"/>
+    <jsp:setProperty name="raspberrypi" property="ram_type" value="LPDDR2"/>
+    <jsp:setProperty name="raspberrypi" property="url" value="/static/img/microcontrollers/raspberryPi.jpg"/>
+    <jsp:setProperty name="raspberrypi" property="vendor" value="Raspberrypi"/>
+    <jsp:setProperty name="raspberrypi" property="voltage" value="5.0"/>
+
+    <jsp:useBean id="raspberrypi2" class="edu.etu.web.Item" scope="session" />
+    <jsp:setProperty name="raspberrypi2" property="product_name" value="Raspberry Pi 2"/>
+    <jsp:setProperty name="raspberrypi2" property="id" value="raspberrypi2"/>
+    <jsp:setProperty name="raspberrypi2" property="frequency" value="2.2"/>
+    <jsp:setProperty name="raspberrypi2" property="microcontroller" value="Broadcom BCM2837"/>
+    <jsp:setProperty name="raspberrypi2" property="price" value="2000"/>
+    <jsp:setProperty name="raspberrypi2" property="ram_size" value="1.0"/>
+    <jsp:setProperty name="raspberrypi2" property="ram_type" value="LPDDR2"/>
+    <jsp:setProperty name="raspberrypi2" property="url" value="/static/img/microcontrollers/raspberryPi.jpg"/>
+    <jsp:setProperty name="raspberrypi2" property="vendor" value="Raspberrypi"/>
+    <jsp:setProperty name="raspberrypi2" property="voltage" value="5.0"/>
+
+    <jsp:useBean id="raspberrypi3" class="edu.etu.web.Item" scope="session" />
+    <jsp:setProperty name="raspberrypi3" property="product_name" value="Raspberry Pi 3"/>
+    <jsp:setProperty name="raspberrypi3" property="id" value="raspberrypi3"/>
+    <jsp:setProperty name="raspberrypi3" property="frequency" value="3.2"/>
+    <jsp:setProperty name="raspberrypi3" property="microcontroller" value="Broadcom BCM2837"/>
+    <jsp:setProperty name="raspberrypi3" property="price" value="1000"/>
+    <jsp:setProperty name="raspberrypi3" property="ram_size" value="1.0"/>
+    <jsp:setProperty name="raspberrypi3" property="ram_type" value="LPDDR2"/>
+    <jsp:setProperty name="raspberrypi3" property="url" value="/static/img/microcontrollers/raspberryPi.jpg"/>
+    <jsp:setProperty name="raspberrypi3" property="vendor" value="Raspberrypi"/>
+    <jsp:setProperty name="raspberrypi3" property="voltage" value="5.0"/>
+
+    <jsp:useBean id="arduinouno" class="edu.etu.web.Item" scope="session" />
+    <jsp:setProperty name="arduinouno" property="product_name" value="Arduino Uno"/>
+    <jsp:setProperty name="arduinouno" property="id" value="arduinouno"/>
+    <jsp:setProperty name="arduinouno" property="frequency" value="0.26"/>
+    <jsp:setProperty name="arduinouno" property="microcontroller" value="ATmega328p"/>
+    <jsp:setProperty name="arduinouno" property="price" value="500"/>
+    <jsp:setProperty name="arduinouno" property="ram_size" value="0.2"/>
+    <jsp:setProperty name="arduinouno" property="ram_type" value="LPDDR2"/>
+    <jsp:setProperty name="arduinouno" property="url" value="/static/img/microcontrollers/arduino_uno.jpg"/>
+    <jsp:setProperty name="arduinouno" property="vendor" value="Arduino"/>
+    <jsp:setProperty name="arduinouno" property="voltage" value="7.0"/>
+
+    <jsp:useBean id="arduinonano" class="edu.etu.web.Item" scope="session" />
+    <jsp:setProperty name="arduinouno" property="product_name" value="Arduino Nano"/>
+    <jsp:setProperty name="arduinouno" property="id" value="arduinonano"/>
+    <jsp:setProperty name="arduinouno" property="frequency" value="0.16"/>
+    <jsp:setProperty name="arduinouno" property="microcontroller" value="ATmega328p"/>
+    <jsp:setProperty name="arduinouno" property="price" value="100"/>
+    <jsp:setProperty name="arduinouno" property="ram_size" value="0.2"/>
+    <jsp:setProperty name="arduinouno" property="ram_type" value="LPDDR2"/>
+    <jsp:setProperty name="arduinouno" property="url" value="/static/img/microcontrollers/arduino_nano.jpg"/>
+    <jsp:setProperty name="arduinouno" property="vendor" value="Arduino"/>
+    <jsp:setProperty name="arduinouno" property="voltage" value="7.0"/>
+
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 
     <script type="text/javascript">
@@ -97,7 +158,7 @@
         }
 
         function changeLanguage(lang) {
-            applyFilters("?lang=" + lang)
+            applyFilters("?lang=" + lang);
             window.location.href = href;
         }
 
@@ -105,6 +166,14 @@
 
 </head>
 <body>
+<%
+    Database database = new Database();
+    database.getItemslist().add(raspberrypi);
+    database.getItemslist().add(raspberrypi2);
+    database.getItemslist().add(raspberrypi3);
+    database.getItemslist().add(arduinouno);
+    database.getItemslist().add(arduinonano);
+%>
     <div class="container">
         <jsp:include page="navigation.jsp"></jsp:include>
         <div class="main">
