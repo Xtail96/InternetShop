@@ -48,7 +48,7 @@ public class ItemCard extends HttpServlet{
         out.print(head);
         request.getRequestDispatcher("/navigation.jsp").include(request, response);
 
-        String body = getContainer(request, params, storeResources, itemResources);
+        String body = getContainer(request, item, storeResources, itemResources);
         out.print(body);
 
         request.getRequestDispatcher("/footer.jsp").include(request, response);
@@ -135,20 +135,20 @@ public class ItemCard extends HttpServlet{
         return scripts;
     }
 
-    private String getContainer(HttpServletRequest request, Map<String, String[]> params, ResourceBundle storeResources, ResourceBundle itemResources){
+    private String getContainer(HttpServletRequest request, Item item, ResourceBundle storeResources, ResourceBundle itemResources){
         String container = "<div class=\"container\">" +
-                getMain(request, params, storeResources, itemResources) +
+                getMain(request, item, storeResources, itemResources) +
                 "</container>";
         return container;
     }
 
-    private String getMain(HttpServletRequest request, Map<String, String[]> params, ResourceBundle storeResources, ResourceBundle itemResources){
-        String price = params.get("price")[0].toString();
-        String frequency = params.get("frequency")[0].toString();
-        String ram_size = params.get("ramsize")[0].toString();
-        String ram_type = params.get("ramtype")[0].toString();
-        String vendor = params.get("vendor")[0].toString();
-        String voltage = params.get("voltage")[0].toString();
+    private String getMain(HttpServletRequest request, Item item, ResourceBundle storeResources, ResourceBundle itemResources){
+        String price = item.getPrice().toString();
+        String frequency = item.getFrequency().toString();
+        String ram_size = item.getRam_size().toString();
+        String ram_type = item.getRam_type();
+        String vendor = item.getVendor();
+        String voltage = item.getVoltage().toString();
 
         String mainContent = "<div class=\"main\">" +
                 "<h1>" + itemResources.getString("name") + "</h1>" +

@@ -17,7 +17,7 @@
         <br />
         <%=shopResources.getString("ram")%> <%=ram_size%> <%=ram_type%>
         <br />
-        <a href="${pageContext.request.contextPath}/item?id=<%=item.getId()%>&price=<%=productPrice%>&frequency=<%=frequency%>&ramsize=<%=ram_size%>&ramtype=<%=ram_type%>&vendor=<%=vendor%>&voltage=<%=voltage%>&lang=<%=lang%>">
+        <a href="${pageContext.request.contextPath}/item?id=<%=item.getId()%>&lang=<%=lang%>">
             <%=shopResources.getString("more")%>
         </a>
     </p>
