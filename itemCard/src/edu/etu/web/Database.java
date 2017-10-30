@@ -55,7 +55,7 @@ public class Database {
         item = new Item();
         item.setId("arduinouno");
         item.setProduct_name("Arduino Uno");
-        item.setUrl("/static/img/microcontrollers/arduino.jpg");
+        item.setUrl("/static/img/microcontrollers/arduino_uno.jpg");
         item.setFrequency(0.26);
         item.setMicrocontroller("ATmega328p");
         item.setRam_size(0.2);
@@ -68,7 +68,7 @@ public class Database {
         item = new Item();
         item.setId("arduinonano");
         item.setProduct_name("Arduino Nano");
-        item.setUrl("/static/img/microcontrollers/arduino.jpg");
+        item.setUrl("/static/img/microcontrollers/arduino_nano.jpg");
         item.setFrequency(0.16);
         item.setMicrocontroller("ATmega328p");
         item.setRam_size(0.2);

@@ -1,16 +1,17 @@
 package edu.etu.web;
 
+import javax.servlet.Filter;
 import javax.servlet.http.Cookie;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by Xtail on 22.10.17.
  */
 public class Util {
-    public static Map<String, Integer> parseCookies(Cookie[] cookies) {
+    /*public static Map<String, Integer> parseCookies(Cookie[] cookies) {
         Map<String, Cookie> requestCookies = Util.mapCookiesByName(cookies);
-        Map<String, Cookie> defaultCookies = Util.getDefaultCookies();
         Map<String, Integer> filters = new HashMap<>();
 
         for (Map.Entry<String, Cookie> defaultCookie : defaultCookies.entrySet()) {
@@ -37,27 +38,7 @@ public class Util {
         }
 
         return filters;
-    }
-
-    public static Map<String, Cookie> getDefaultCookies() {
-        HashMap<String, Cookie> defaultCookies = new HashMap<>();
-
-        // filters
-        defaultCookies.put("min_price", new Cookie("min_price", "0"));
-        defaultCookies.put("max_price", new Cookie("max_price", "1000000"));
-
-        defaultCookies.put("type_electro", new Cookie("type_electro", "1"));
-        defaultCookies.put("type_bass", new Cookie("type_bass", "1"));
-        defaultCookies.put("type_semiacoustic", new Cookie("type_semiacoustic", "1"));
-
-        defaultCookies.put("string_number_6", new Cookie("string_number_6", "1"));
-        defaultCookies.put("string_number_7", new Cookie("string_number_7", "1"));
-        defaultCookies.put("string_number_4", new Cookie("string_number_4", "1"));
-
-        defaultCookies.put("lefthanded", new Cookie("lefthanded", "0"));
-
-        return defaultCookies;
-    }
+    }*/
 
     public static Map<String, Cookie> mapCookiesByName(Cookie[] cookies) {
         final HashMap<String, Cookie> cookiesMap = new HashMap<>();
@@ -68,4 +49,30 @@ public class Util {
         }
         return cookiesMap;
     }
+
+    public static Map<String, Cookie> cookiesFromFilters(ItemFilter filter) {
+        final HashMap<String, Cookie> cookieHashMap = new HashMap<>();
+
+        final Integer cookieTime = 300;
+
+        cookieHashMap.put("price_low", new Cookie("price_low", filter.getPrice_low().toString()));
+        cookieHashMap.put("price_high", new Cookie("price_high", filter.getPrice_high().toString()));
+        cookieHashMap.put("frequency_low", new Cookie("frequency_low", filter.getFrequency_low().toString()));
+        cookieHashMap.put("frequency_high", new Cookie("frequency_high", filter.getFrequency_high().toString()));
+
+        List<String> vendors = filter.getVendors();
+        Boolean isRaspberrypi = vendors.contains("raspberrypi");
+        Boolean isArduino = vendors.contains("arduino");
+
+        cookieHashMap.put("vendor_raspberrypi", new Cookie("vendor_raspberrypi", isRaspberrypi.toString()));
+        cookieHashMap.put("vendor_arduino", new Cookie("vendor_arduino", isArduino.toString()));
+
+        for (Map.Entry<String, Cookie> entry : cookieHashMap.entrySet()) {
+            entry.getValue().setMaxAge(cookieTime);
+        }
+
+        return  cookieHashMap;
+    }
+
+
 }

@@ -10,11 +10,11 @@
 
         <init-param>
             <param-name>activeTab</param-name>
-            <param-value>information_tab</param-value>
+            <param-value>description_tab</param-value>
         </init-param>
         <init-param>
             <param-name>activeContainer</param-name>
-            <param-value>product_information</param-value>
+            <param-value>product_description</param-value>
         </init-param>
     </servlet>
 

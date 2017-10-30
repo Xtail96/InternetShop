@@ -4,7 +4,8 @@
 <%@ page import="edu.etu.web.Item" %>
 <%@ page import="edu.etu.web.Database" %>
 <%@ page import="edu.etu.web.Util" %>
-<%@ page import="edu.etu.web.ItemFilter" %><%--
+<%@ page import="edu.etu.web.ItemFilter" %>
+<%@ page import="java.net.CookieHandler" %><%--
   Created by IntelliJ IDEA.
   User: Xtail
   Date: 22.10.17
@@ -27,15 +28,27 @@
 
     String lang = "";
     if(!params.containsKey("lang")) {
-        lang = "ru";
+        if(cookies.containsKey("lang")) {
+            lang = cookies.get("lang").getValue();
+        }
+        else {
+            lang = "ru";
+        }
     } else {
         lang = params.get("lang")[0];
     }
+    response.addCookie(new Cookie("lang", lang));
 
     Locale locale = new Locale.Builder().setLanguage(lang).build();
     ResourceBundle shopResources = ResourceBundle.getBundle("strings", locale);
 
     ItemFilter filter = new ItemFilter(params);
+
+
+    for (Map.Entry<String, Cookie> entry : Util.cookiesFromFilters(filter).entrySet()) {
+        Cookie cookie = entry.getValue();
+        response.addCookie(cookie);
+    }
 %>
 <html>
 <head>
@@ -44,7 +57,7 @@
 
     <script type="text/javascript">
 
-        function applyFilters() {
+        function applyFilters(params = "?") {
             /*if (document.getElementById("vendor_raspberrypi").checked) {
                 document.getElementById("vendor_raspberrypi").disabled = true
                 document.
@@ -63,7 +76,7 @@
             let vendor_raspberrypi = document.getElementById("vendor_raspberrypi").checked;
             let vendor_arduino = document.getElementById("vendor_arduino").checked;
 
-            let params = "?price_low=" + price_low +
+            params += "&price_low=" + price_low +
                 "&price_high=" + price_high +
                 "&frequency_low=" + frequency_low + "&frequency_high=" + frequency_high;
 
@@ -82,6 +95,12 @@
 
             window.location.href = params;
         }
+
+        function changeLanguage(lang) {
+            applyFilters("?lang=" + lang)
+            window.location.href = href;
+        }
+
     </script>
 
 </head>

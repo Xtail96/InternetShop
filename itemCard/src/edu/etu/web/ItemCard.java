@@ -43,7 +43,7 @@ public class ItemCard extends HttpServlet{
 
         String meta = getMeta();
         String styles = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + request.getContextPath() + "/static/css/styles.css\">" + getStyles();
-        String scripts = getScripts();
+        String scripts = getScripts(item_id);
         String head = "<html>" + "<head>" + meta + styles + scripts + "</head> <body onload=\"show_element('"+ getInitParameter("activeContainer") +"', '" + getInitParameter("activeTab") + "')\">";
         out.print(head);
         request.getRequestDispatcher("/navigation.jsp").include(request, response);
@@ -109,7 +109,7 @@ public class ItemCard extends HttpServlet{
         return styles;
     }
 
-    private String getScripts(){
+    private String getScripts(String item_id){
         String scripts = "<script type=\"text/javascript\">\n" +
                 "    function hide_all(){var to_hide = document.getElementsByClassName('tab_content');\n" +
                 "      for(var i = 0; i < to_hide.length; i++){\n" +
@@ -156,7 +156,7 @@ public class ItemCard extends HttpServlet{
                 "<div class=\"product_header\">\n" +
                 "            <img src=\"" + request.getContextPath() + "/static/img/microcontrollers/" + itemResources.getString("img_name") +"\" alt=\"Картинка товара\" />\n" +
                 "            <div class=\"product_price\">\n" +
-                "              <b>" + itemResources.getString("price") + price + "</b>\n" +
+                "              <b>" + itemResources.getString("price") + price + "</b>\n <br />" +
                 "              <button>" + storeResources.getString("to_cart") + "</button></div></div>" +
                 "<div class=\"product_tab_menu\">\n" +
                 "          <button class=\"product_tab_menu_link\" id='description_tab' onclick=\"show_element('product_description', 'description_tab')\">" + itemResources.getString("description_tab_header") + "</button>\n" +
