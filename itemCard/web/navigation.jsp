@@ -49,7 +49,7 @@
         <button>
             <%=navigationResources.getString("history")%>
         </button>
-        <button class="card">
+        <button class="card" onclick="window.location.href='/cart.jsp'">
             <%=navigationResources.getString("cart")%>
         </button>
 

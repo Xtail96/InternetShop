@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="item">
-    <button class="buy" onclick="window.location.href='/cart.jsp'"><%=shopResources.getString("to_cart")%></button>
+    <button class="buy" onclick="window.location.href='/cart.jsp?add=<%=item.getId()%>&lang=<%=lang%>'"><%=shopResources.getString("to_cart")%></button>
     <img src="<%=url%>" alt="<%=product_name%>"/>
     <h3><%=product_name%></h3>
     <b class="price"><%=shopResources.getString("price")%><%=productPrice%></b>

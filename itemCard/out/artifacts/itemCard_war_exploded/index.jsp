@@ -50,6 +50,7 @@
         response.addCookie(cookie);
     }
 %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Store Name</title>

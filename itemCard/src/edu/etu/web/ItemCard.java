@@ -53,11 +53,11 @@ public class ItemCard extends HttpServlet{
         String meta = getMeta();
         String styles = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + request.getContextPath() + "/static/css/styles.css\">" + getStyles();
         String scripts = getScripts(item_id);
-        String head = "<html>" + "<head>" + meta + styles + scripts + "</head> <body onload=\"show_element('"+ getInitParameter("activeContainer") +"', '" + getInitParameter("activeTab") + "')\">";
+        String head = "<!DOCTYPE html> <html>" + "<head>" + meta + styles + scripts + "</head> <body onload=\"show_element('"+ getInitParameter("activeContainer") +"', '" + getInitParameter("activeTab") + "')\">";
         out.print(head);
         request.getRequestDispatcher("/navigation.jsp").include(request, response);
 
-        String body = getContainer(request, item, storeResources, itemResources);
+        String body = getContainer(request, item, language, storeResources, itemResources);
         out.print(body);
 
         request.getRequestDispatcher("/footer.jsp").include(request, response);
@@ -148,14 +148,14 @@ public class ItemCard extends HttpServlet{
         return scripts;
     }
 
-    private String getContainer(HttpServletRequest request, Item item, ResourceBundle storeResources, ResourceBundle itemResources){
+    private String getContainer(HttpServletRequest request, Item item, String lang, ResourceBundle storeResources, ResourceBundle itemResources){
         String container = "<div class=\"container\">" +
-                getMain(request, item, storeResources, itemResources) +
+                getMain(request, item, lang, storeResources, itemResources) +
                 "</container>";
         return container;
     }
 
-    private String getMain(HttpServletRequest request, Item item, ResourceBundle storeResources, ResourceBundle itemResources){
+    private String getMain(HttpServletRequest request, Item item, String lang, ResourceBundle storeResources, ResourceBundle itemResources){
         String price = item.getPrice().toString();
         String frequency = item.getFrequency().toString();
         String ram_size = item.getRam_size().toString();
@@ -170,7 +170,7 @@ public class ItemCard extends HttpServlet{
                 "            <img src=\"" + request.getContextPath() + "/static/img/microcontrollers/" + itemResources.getString("img_name") +"\" alt=\"Картинка товара\" />\n" +
                 "            <div class=\"product_price\">\n" +
                 "              <b>" + itemResources.getString("price") + price + "</b>\n <br />" +
-                "              <button>" + storeResources.getString("to_cart") + "</button></div></div>" +
+                "              <button onclick=\"window.location.href='/cart.jsp?add=" + item.getId() + "&lang=" + lang + "'\">" + storeResources.getString("to_cart") + "</button></div></div>" +
                 "<div class=\"product_tab_menu\">\n" +
                 "          <button class=\"product_tab_menu_link\" id='description_tab' onclick=\"show_element('product_description', 'description_tab')\">" + itemResources.getString("description_tab_header") + "</button>\n" +
                 "          <button class=\"product_tab_menu_link\" id='information_tab' onclick=\"show_element('product_information', 'information_tab')\">" + itemResources.getString("information_tab_header") + "</button>\n" +
