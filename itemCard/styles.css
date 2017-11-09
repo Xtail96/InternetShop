@@ -128,7 +128,7 @@ body{
 }
 
 .main .right .cart_right_panel button{
-    color: #007769;
+    color: #007769; 
     padding: 15px;
     margin: 10px;
     border: 1px solid transparent;
@@ -139,7 +139,7 @@ body{
 
 .main .right .cart_right_panel button:hover{
     text-decoration: underline;
-    color: #48a697;
+    color: #48a697; 
 }
 
 .main .right .cart_right_panel button:active{
@@ -215,7 +215,8 @@ body{
 
 .main .items_container .item .price{
     font-size: 150%;
-    color: #333333;
+    background-color: #333333;
+    cursor: pointer;
 }
 
 .main .separator {
@@ -227,7 +228,7 @@ body{
 .main .items_container .cart_item{
     background-color: #fff;
     font-size: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 25px; 
     border-bottom: 1px solid #dfdfdf;
     overflow: auto;
 }
@@ -276,7 +277,7 @@ body{
     border: 1px solid transparent;
     border-bottom: 1px solid #dfdfdf;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 5px:
     margin-left: 0px;
     margin-right: 0px;
     font-size: 100%;
@@ -316,6 +317,7 @@ body{
 }
 
 .footer{
+    border-top: 1px solid #dfdfdf;
     width: 90%;
     max-width: 1920px;
     margin-left: auto;

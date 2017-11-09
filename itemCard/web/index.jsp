@@ -127,15 +127,6 @@
     <script type="text/javascript">
 
         function applyFilters(params = "?") {
-            /*if (document.getElementById("vendor_raspberrypi").checked) {
-                document.getElementById("vendor_raspberrypi").disabled = true
-                document.
-            }
-            if (document.getElementById("vendor_arduino").checked) {
-                document.getElementById("vendor_arduino").disabled = true
-            }
-            document.getElementById("filter_form").submit();*/
-
             let price_low = document.getElementById("price_low").value;
             let price_high = document.getElementById("price_high").value;
 
@@ -159,15 +150,11 @@
                 params += "&vendors=";
             }
 
-
-            //alert(params);
-
             window.location.href = params;
         }
 
         function changeLanguage(lang) {
             applyFilters("?lang=" + lang);
-            window.location.href = href;
         }
 
     </script>
