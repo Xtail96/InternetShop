@@ -5,11 +5,14 @@
   Time: 15:33
   To change this template use File | Settings | File Templates.
 --%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="java.util.ResourceBundle"%>
 <%@page import="java.util.Locale"%>
 <%@ page import="java.util.Map" %>
 <%@ page import="edu.etu.web.Util" %>
+
 <%
     final Map<String, String[]> params = request.getParameterMap();
     final Map<String, Cookie> navigationCookies = Util.mapCookiesByName(request.getCookies());
@@ -34,21 +37,45 @@
     function goHome() {
         window.location.href = "/";
     }
+
+    function goToAuth() {
+        window.location.href = "/login";
+    }
+
+    function logout() {
+        window.location.href = "/logout";
+    }
 </script>
 
 <div class="navigation">
     <div class="navigation_container">
+        <c:choose>
+            <c:when test="${empty sessionScope.username}">
+                <button onclick="goToAuth()">
+                    <%=navigationResources.getString("authorization")%>
+                </button>
+            </c:when>
+            <c:otherwise>
+                <div class="user-information">
+                    <b>
+                            ${sessionScope.username}
+                    </b>
+
+                    <button onclick="logout()">
+                        Exit
+                    </button>
+                </div>
+            </c:otherwise>
+        </c:choose>
+
         <button onclick="goHome()">
             <%=navigationResources.getString("catalog")%>
         </button>
 
         <button>
-            <%=navigationResources.getString("authorization")%>
-        </button>
-
-        <button>
             <%=navigationResources.getString("history")%>
         </button>
+
         <button class="card" onclick="window.location.href='/cart.jsp'">
             <%=navigationResources.getString("cart")%>
         </button>

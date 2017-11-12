@@ -82,7 +82,7 @@
                     <fmt:setBundle basename="strings"/>
                     <fmt:message key="summary"/>
                 </b>
-                <b class="color_material_green">${totalCost}</b>
+                <b>${totalCost}</b>
                 <br />
                 <button>
                     <fmt:setBundle basename="strings"/>

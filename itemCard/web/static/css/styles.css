@@ -116,7 +116,7 @@ body{
 }
 
 .main .right .cart_right_panel {
-    background-color: #eee;
+    background-color: #007769;
     padding-top: 15px;
     text-align: center;
     font-size: 150%;
@@ -124,11 +124,12 @@ body{
     margin-left: 25px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    box-shadow: 0px 0px 3px 1px #dfdfdf;
+    box-shadow: 0px 0px 3px 1px #004a3f;
+    color: #fff;
 }
 
 .main .right .cart_right_panel button{
-    color: #007769;
+    color: #fff;
     padding: 15px;
     margin: 10px;
     border: 1px solid transparent;
@@ -139,12 +140,10 @@ body{
 
 .main .right .cart_right_panel button:hover{
     text-decoration: underline;
-    color: #48a697;
 }
 
 .main .right .cart_right_panel button:active{
     text-decoration: none;
-    color: #004a3f;
 }
 
 
@@ -323,4 +322,55 @@ body{
     text-align: center;
     color: #333;
     padding-bottom: 50px;
+}
+
+.main .auth-form{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+}
+
+.main .auth-form input{
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    text-align: left;
+    font-size: 100%;
+    margin-top: 5px;
+}
+
+.main .auth-form button{
+    width: 100%;
+    font-size: 100%;
+    margin-top: 10px;
+    color: #007769;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 5px;
+}
+
+.main .auth-form button:hover{
+    color: #007769;
+    text-decoration: underline;
+}
+
+.main .auth-form button:active{
+    color: #004a3f;
+    text-decoration: none;
+}
+
+.navigation .user-information{
+    background-color: transparent;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+}
+
+.navigation .user-information b{
+    font-size: 150%;
 }
