@@ -45,6 +45,10 @@
     function logout() {
         window.location.href = "/logout";
     }
+
+    function profile() {
+        window.location.href = "/profile.jsp"
+    }
 </script>
 
 <div class="navigation">
@@ -61,8 +65,12 @@
                             ${sessionScope.username}
                     </b>
 
+                    <button onclick="profile()">
+                        <%=navigationResources.getString("profile")%>
+                    </button>
+
                     <button onclick="logout()">
-                        Exit
+                        <%=navigationResources.getString("exit")%>
                     </button>
                 </div>
             </c:otherwise>

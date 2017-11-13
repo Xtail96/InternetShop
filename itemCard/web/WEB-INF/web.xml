@@ -32,16 +32,16 @@
     <servlet>
         <servlet-name>ItemCard</servlet-name>
         <servlet-class>edu.etu.web.ItemCard</servlet-class>
-
-        <init-param>
-            <param-name>activeTab</param-name>
-            <param-value>description_tab</param-value>
-        </init-param>
-        <init-param>
-            <param-name>activeContainer</param-name>
-            <param-value>product_description</param-value>
-        </init-param>
     </servlet>
+
+    <context-param>
+        <param-name>activeTab</param-name>
+        <param-value>description_tab</param-value>
+    </context-param>
+    <context-param>
+        <param-name>activeContainer</param-name>
+        <param-value>product_description</param-value>
+    </context-param>
 
     <servlet-mapping>
         <servlet-name>ItemCard</servlet-name>

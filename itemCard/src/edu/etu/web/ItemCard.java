@@ -53,7 +53,7 @@ public class ItemCard extends HttpServlet{
         String meta = getMeta();
         String styles = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + request.getContextPath() + "/static/css/styles.css\">" + getStyles();
         String scripts = getScripts(item_id);
-        String head = "<!DOCTYPE html> <html>" + "<head>" + meta + styles + scripts + "</head> <body onload=\"show_element('"+ getInitParameter("activeContainer") +"', '" + getInitParameter("activeTab") + "')\">";
+        String head = "<!DOCTYPE html> <html>" + "<head>" + meta + styles + scripts + "</head> <body onload=\"show_element('"+ getServletContext().getInitParameter("activeContainer") +"', '" + getServletContext().getInitParameter("activeTab") + "')\">";
         out.print(head);
         request.getRequestDispatcher("/navigation.jsp").include(request, response);
 
