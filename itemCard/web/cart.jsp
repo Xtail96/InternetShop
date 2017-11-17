@@ -115,11 +115,11 @@
                                     <fmt:setBundle basename="strings"/>
                                     <fmt:message key="delete"/>
                                 </button>
-                                <button onclick="refreshCount('${requestScope.item.getId()}', document.getElementById('${requestScope.item.getId()}_count').value)">
-                                    <fmt:setBundle basename="strings"/>
-                                    <fmt:message key="refresh"/>
-                                </button>
-                                <input id="${requestScope.item.getId()}_count" class="quantity_input" type="text" name="quantity" value="${purchace.value}" />
+                                <!--<button onclick="refreshCount('${requestScope.item.getId()}', document.getElementById('${requestScope.item.getId()}_count').value)">
+                                    <%--<fmt:setBundle basename="strings"/>--%>
+                                    <%--<fmt:message key="refresh"/>--%>
+                                </button>-->
+                                <input id="${requestScope.item.getId()}_count" class="quantity_input" type="text" name="quantity" value="${purchace.value}" onchange="refreshCount('${requestScope.item.getId()}', document.getElementById('${requestScope.item.getId()}_count').value)" />
                                 <b class="quantity_label">
                                     <fmt:setBundle basename="strings"/>
                                     <fmt:message key="count"/>

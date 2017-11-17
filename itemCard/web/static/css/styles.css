@@ -374,3 +374,54 @@ body{
 .navigation .user-information b{
     font-size: 150%;
 }
+
+.main .next_step {
+    float: right;
+    width: 50%;
+    margin: auto;
+    color: #007769;
+    font-size: 150%;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.main .next_step:hover {
+    color: #48a697;
+    text-decoration: underline;
+}
+
+.main .next_step:active {
+    text-decoration: none;
+}
+
+.main #delivery_type_form {
+    font-size: 150%;
+    /*border: 1px solid #004a3f;*/
+    padding: 5px;
+    margin: 5px;
+}
+
+.main .submit {
+    color: #007769;
+    font-size: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 5px;
+    margin: 5px;
+}
+
+.main .submit:hover {
+    color: #48a697;
+    text-decoration: underline;
+}
+
+.main .submit:active {
+    text-decoration: none;
+}
+
+.main #delivery_address_form {
+    padding: 5px;
+    margin: 5px;
+    font-size: 150%;
+    /*display: none;*/
+}

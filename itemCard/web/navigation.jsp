@@ -47,7 +47,11 @@
     }
 
     function profile() {
-        window.location.href = "/profile.jsp"
+        window.location.href = "/profile.jsp";
+    }
+
+    function goToMaps() {
+        window.location.href = "/maps.jsp";
     }
 </script>
 
@@ -82,6 +86,10 @@
 
         <button>
             <%=navigationResources.getString("history")%>
+        </button>
+
+        <button onclick="goToMaps()">
+            Maps
         </button>
 
         <button class="card" onclick="window.location.href='/cart.jsp'">
