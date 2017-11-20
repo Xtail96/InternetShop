@@ -1,5 +1,7 @@
 package edu.etu.web;
 
+import org.hibernate.Session;
+
 import javax.persistence.*;
 import java.util.*;
 
@@ -101,7 +103,10 @@ public class HistoryEntry {
     }
 
     public static List<HistoryEntry> getAll() {
-        return HibernateConnector.getSessionFactory().openSession().createCriteria(HistoryEntry.class).list();
+        Session dbSession = HibernateConnector.getSessionFactory().openSession();
+        List<HistoryEntry> ordersList = dbSession.createCriteria(HistoryEntry.class).list();
+        dbSession.close();
+        return ordersList;
     }
 
 

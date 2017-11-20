@@ -44,12 +44,21 @@
             <br>
             <fmt:message key="activeTab"/>:
             <fmt:message key="${initParam.activeTab}"/>
-            <h2>Заказы:</h2>
+            <h2>
+                <fmt:setBundle basename="strings"/>
+                <fmt:message key="orders"/>:
+            </h2>
             <div class="items_container">
                 <c:forEach var="order" items="${HistoryEntry.getAll()}">
                     <c:if test="${order.user eq sessionScope.username}">
-                        <div class="item">
+                        <div class="order_item">
                             <ul>
+                                <li>
+                                    <b>
+                                        <fmt:setBundle basename="strings"/>
+                                        <fmt:message key="username"/> ${order.user}
+                                    </b>
+                                </li>
                                 <li>
                                     <b>
                                         <fmt:setBundle basename="strings"/>
@@ -95,9 +104,10 @@
                                                         <a href="/item?id=${orderItem.id}">
                                                             <fmt:setBundle basename="${orderItem.id}"/>
                                                             <fmt:message key="name"/>
-                                                        </a> - ${itemsMapEntry.value}
+                                                        </a>
                                                         <fmt:setBundle basename="strings"/>
                                                         <fmt:message key="count"/>
+                                                        ${itemsMapEntry.value}
                                                     </b>
                                                 </li>
                                             </c:if>

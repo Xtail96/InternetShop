@@ -11,6 +11,10 @@
 <%@ taglib prefix='fmt' uri='http://java.sun.com/jsp/jstl/fmt' %>
 <%@ taglib prefix='util' uri='/WEB-INF/tld/util' %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<c:set var="lang" value="${util:getLang(pageContext.request, pageContext.response)}"/>
+<fmt:setLocale value="${lang}"/>
+
 <c:if test="${empty sessionScope.purchaces || empty sessionScope.username ||empty param.address || empty param.delivery}">
     <c:redirect url="/"/>
 </c:if>
@@ -33,7 +37,6 @@
         <fmt:message key="title"/>
     </title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/styles.css">
-    <script src="${pageContext.request.contextPath}/static/js/common.js"></script>
     <script type="text/javascript">
         function changeLanguage(lang) {
             window.location.href = "?lang=" + lang;

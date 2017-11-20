@@ -7,7 +7,31 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="points" value="${['8общага', 'ЛЭТИ', '5общага']}" />
+<%@ taglib prefix='fmt' uri='http://java.sun.com/jsp/jstl/fmt' %>
+<%@ taglib prefix='util' uri='/WEB-INF/tld/util' %>
+
+<c:set var="lang" value="${util:getLang(pageContext.request, pageContext.response)}"/>
+<fmt:setLocale value="${lang}"/>
+<c:choose>
+    <c:when test="${lang eq 'ru'}">
+        <c:set var="points" value="${['Первый магазин', 'Второй магазин', 'Третий магазин']}"/>
+    </c:when>
+    <c:when test="${lang eq 'nl'}">
+        <c:set var="points" value="${['Eerste winkel', 'Tweede winkel', 'Derde winkel']}"/>
+    </c:when>
+    <c:otherwise>
+        <c:set var="points" value="${['First store', 'Second store', 'Third store']}"/>
+    </c:otherwise>
+</c:choose>
+
+<c:if test="${empty sessionScope.purchaces}">
+    <c:redirect url="/"/>
+</c:if>
+<c:if test="${empty sessionScope.username}">
+    <c:redirect url="/login"/>
+</c:if>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +45,7 @@
             let myPlacemarkCollection;
             let mySearchControl;
             let mySearchResults;
-            let deliveryType;
+            let deliveryType = "undefined";
             let courierAddress;
             
             
@@ -30,26 +54,27 @@
                     center: [59.96, 30.18],
                     zoom: 10,
                     type: 'yandex#map',
-                    controls: ['typeSelector', 'zoomControl']
+                    controls: ['typeSelector', 'zoomControl'],
+                    behaviors: ["drag", "dblClickZoom", "rightMouseButtonMagnifier", "multiTouch"]
                 });
                 myPlacemarkCollection = new ymaps.GeoObjectCollection();
                 mySearchControl = new ymaps.control.SearchControl();
                 mySearchResults = new ymaps.GeoObjectCollection();
 
                 let firstStore = new ymaps.Placemark(
-                    [59.99, 30.31],
+                    [60.07, 30.33],
                     { iconContent: '${points[0]}', balloonContent: '${points[0]}', myId: 'firstStore' },
-                    {preset: 'islands#blueStretchyIcon'});
+                    {preset: 'islands#greenStretchyIcon'});
 
                 let secondStore = new ymaps.Placemark(
-                    [59.97, 30.32],
+                    [59.91, 30.47],
                     { iconContent: '${points[1]}', balloonContent: '${points[1]}', myId: 'secondStore' },
-                    {preset: 'islands#blueStretchyIcon'});
+                    {preset: 'islands#greenStretchyIcon'});
 
                 let thirdStore = new ymaps.Placemark(
                     [59.87, 30.30],
                     { iconContent: '${points[2]}', balloonContent: '${points[2]}', myId: 'thirdStore' },
-                    {preset: 'islands#blueStretchyIcon'});
+                    {preset: 'islands#greenStretchyIcon'});
 
 
                 myPlacemarkCollection
@@ -61,7 +86,7 @@
                     geoObj.balloon.events.add('close', storeBalloonCloseEvent);
                 });
                 function storeBalloonOpenEvent(e) {
-                    document.getElementById('addresses').value = e.get('target').properties.get('baloonContent');
+                    document.getElementById('addresses').value = e.get('target').properties.get('balloonContent');
                 }
                 function storeBalloonCloseEvent(e) {
                     document.getElementById('addresses').value = "noselect";
@@ -88,7 +113,6 @@
                         deliveryType = "from_store";
                         myMap.controls.remove(mySearchControl);
                         myMap.geoObjects.add(myPlacemarkCollection);
-                        showStoreAddresses();
                     }
                 };
 
@@ -104,6 +128,10 @@
                     }
                 };
 
+                /*console.log(deliveryType);
+                if(deliveryType === "undefined") {
+                    myMap.displayDeliveryFromStore();
+                }*/
 
                 switch (document.querySelector('input[name="delivery_type"]:checked').value) {
                     case "from_store":
@@ -113,7 +141,6 @@
                         myMap.displayDeliveryByCourier();
                         break;
                 }
-
             }
 
 
@@ -133,11 +160,8 @@
                 } else {
                     myPlacemarkCollection.each(geoObj => {
                         let content = geoObj.properties.get("balloonContent");
-                        //console.log(content);
-                        //console.log(currentAddress);
                         if (content === currentAddress) {
                             geoObj.balloon.open();
-                            addressesForm.value = currentAddress;
                         }
                     });
                 }
@@ -160,9 +184,12 @@
                 } else {
                     let hr = "/order_complete.jsp?address=" + address + "&delivery=" + (deliveryType === "courier");
                     hr = encodeURI(hr);
-                    console.log(hr);
                     window.location.href = hr;
                 }
+            }
+
+            function changeLanguage(lang) {
+                window.location.href = "?lang=" + lang;
             }
     </script>
 </head>
@@ -170,34 +197,45 @@
     <div class="container">
         <jsp:include page="navigation.jsp" />
         <div class="main">
-            <h1>Maps</h1>
+            <h1>
+                <fmt:setBundle basename="strings"/>
+                <fmt:message key="order_title"/>
+            </h1>
             <div class="right">
-                <button class="next_step" onclick="checkoutRequest()">Next Step</button>
+                <button class="next_step" onclick="checkoutRequest()">
+                    <fmt:setBundle basename="strings"/>
+                    <fmt:message key="next"/>
+                </button>
             </div>
             <div class="left">
 
                 <form id="delivery_type_form" method="get">
-                    <h3>Выберите вариант доставки</h3>
+                    <h3>
+                        <fmt:setBundle basename="strings"/>
+                        <fmt:message key="choose_order_type"/>
+                    </h3>
                     <input type="radio"
                            name="delivery_type"
-                           value="from_here"
+                           value="from_store"
                            id="delivery_from_here_radio_button"
                            checked
                            onclick="myMap.displayDeliveryFromStore()"
-                    /> Самовывоз
+                    /><fmt:setBundle basename="strings"/><fmt:message key="from_here"/>
                     <input type="radio"
                            name="delivery_type"
                            value="courier"
                            id="delivery_by_courier_radio_button"
                            onclick="myMap.displayDeliveryByCourier()"
-                    /> Доставка Курьером
+                    /><fmt:setBundle basename="strings"/><fmt:message key="courier"/>
                 </form>
-
                 <form id="delivery_address_form">
-                    <h3>Выберите адрес доставки</h3>
-                    <select id="addresses" onchange="onAddressChangeAction()">
-                        <!--<option selected value="noselect"></option>-->
-                        <option value="${points[0]}" >${points[0]}</option>
+                    <h3>
+                        <fmt:setBundle basename="strings"/>
+                        <fmt:message key="choose_address"/>
+                    </h3>
+                    <select id="addresses" onchange="onAddressChangeAction(); return false;">
+                        <option value="noselect"></option>
+                        <option value="${points[0]}">${points[0]}</option>
                         <option value="${points[1]}">${points[1]}</option>
                         <option value="${points[2]}">${points[2]}</option>
                     </select>
@@ -206,7 +244,7 @@
             <script type="text/javascript">
                 ymaps.ready(initializeMap);
             </script>
-            <div id="YMapsID" style="width: 100%; height: 250px"></div>
+            <div id="YMapsID" style="width: 100%; height: 750px"></div>
         </div>
         <jsp:include page="footer.jsp" />
     </div>
