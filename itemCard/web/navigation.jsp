@@ -50,8 +50,8 @@
         window.location.href = "/profile.jsp";
     }
 
-    function goToMaps() {
-        window.location.href = "/maps.jsp";
+    function goToOrder() {
+        window.location.href = "/order.jsp";
     }
 </script>
 
@@ -73,6 +73,10 @@
                         <%=navigationResources.getString("profile")%>
                     </button>
 
+                    <button onclick="goToOrder()">
+                        <%=navigationResources.getString("checkout")%>
+                    </button>
+
                     <button onclick="logout()">
                         <%=navigationResources.getString("exit")%>
                     </button>
@@ -84,13 +88,9 @@
             <%=navigationResources.getString("catalog")%>
         </button>
 
-        <button>
-            <%=navigationResources.getString("history")%>
-        </button>
-
-        <button onclick="goToMaps()">
-            Maps
-        </button>
+        <!--<button>
+            <%--<%=navigationResources.getString("history")%>--%>
+        </button>-->
 
         <button class="card" onclick="window.location.href='/cart.jsp'">
             <%=navigationResources.getString("cart")%>

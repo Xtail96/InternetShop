@@ -1,10 +1,14 @@
 package edu.etu.web;
 
+import org.hibernate.Session;
+
 import javax.servlet.Filter;
 import javax.servlet.http.Cookie;
+import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.StringJoiner;
 
 /**
  * Created by Xtail on 22.10.17.
@@ -74,5 +78,22 @@ public class Util {
         return  cookieHashMap;
     }
 
+
+    public static class SaveOrderTag extends SimpleTagSupport {
+
+        private HistoryEntry value;
+
+        public void setValue(HistoryEntry value) {
+            this.value = value;
+        }
+
+        public void doTag() {
+            Session dbSession = HibernateConnector.getSessionFactory().openSession();
+            dbSession.beginTransaction();
+            dbSession.save(value);
+            dbSession.getTransaction().commit();
+            dbSession.close();
+        }
+    }
 
 }

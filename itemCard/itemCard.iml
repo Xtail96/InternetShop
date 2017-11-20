@@ -11,6 +11,12 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map />
+        <naming-strategy-map />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -21,5 +27,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.20" level="application_server_libraries" />
     <orderEntry type="library" name="jstl:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Hibernate 5.2.12-5.2.12" level="project" />
+    <orderEntry type="library" name="com.h2database:h2:1.4.196" level="project" />
   </component>
 </module>

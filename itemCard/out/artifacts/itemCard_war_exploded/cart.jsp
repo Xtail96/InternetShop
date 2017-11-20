@@ -55,6 +55,10 @@
         function refreshCount(id, count) {
             window.location.href = "/cart.jsp?setcountid=" + id + "&setcountq=" + count;
         }
+
+        function makeOrder() {
+            window.location.href = "/order.jsp";
+        }
     </script>
 </head>
 <body>
@@ -84,7 +88,7 @@
                 </b>
                 <b>${totalCost}</b>
                 <br />
-                <button>
+                <button onclick="makeOrder()">
                     <fmt:setBundle basename="strings"/>
                     <fmt:message key="checkout"/>
                 </button>
