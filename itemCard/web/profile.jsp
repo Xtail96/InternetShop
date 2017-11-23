@@ -32,6 +32,39 @@
         function changeLanguage(lang) {
             window.location.href = "?lang=" + lang;
         }
+
+        function loadComments() {
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    document.getElementsByClassName("comments_container")[0].innerHTML = xhr.responseText;
+                }
+            };
+
+            xhr.open("GET", "/comments", true);
+            xhr.send();
+        }
+
+        function postComment() {
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    document.getElementsByName("comment_text")[0].value = "";
+                    loadComments();
+                }
+            };
+
+            xhr.open("POST", "/comments", true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send("text=" + encodeURIComponent(document.getElementsByName("comment_text")[0].value));
+        }
+
+        onload = () => {
+            loadComments();
+        }
+
     </script>
 </head>
 <body>
@@ -121,6 +154,19 @@
                     </c:if>
                 </c:forEach>
             </div>
+
+                <fmt:setBundle basename="strings"/>
+                <fmt:message key="comments"/>: <br />
+                <br />
+                <div class="comments_container">
+
+                </div>
+
+                <textarea style="width:400px; height:300px" name="comment_text"></textarea>
+                <br>
+                <button onclick="postComment()">
+                    Post comment
+                </button>
         </div>
         <jsp:include page="footer.jsp"></jsp:include>
     </div>

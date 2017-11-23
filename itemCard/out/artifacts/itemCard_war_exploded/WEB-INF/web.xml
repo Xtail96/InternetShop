@@ -73,5 +73,15 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CommentAjaxServlet</servlet-name>
+        <servlet-class>edu.etu.web.CommentAjaxServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>CommentAjaxServlet</servlet-name>
+        <url-pattern>/comments</url-pattern>
+    </servlet-mapping>
 
 </web-app>

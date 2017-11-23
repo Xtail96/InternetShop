@@ -12,6 +12,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <mapping class="edu.etu.web.HistoryEntry"/>
+        <mapping class="edu.etu.web.CommentEntry"/>
     </session-factory>
 </hibernate-configuration>
 
