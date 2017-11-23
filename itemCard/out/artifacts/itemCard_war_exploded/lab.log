@@ -1,0 +1,64 @@
+2017-11-23 15:22:04 INFO  LogFilter:23 - /
+2017-11-23 15:22:06 INFO  LogFilter:23 - /
+2017-11-23 15:22:07 INFO  LogFilter:23 - /static/css/styles.css
+2017-11-23 15:22:07 INFO  LogFilter:23 - /
+2017-11-23 15:22:07 INFO  LogFilter:23 - /
+2017-11-23 15:22:14 INFO  LogFilter:23 - /login
+2017-11-23 15:22:14 INFO  LogFilter:23 - /
+2017-11-23 15:22:15 INFO  LogFilter:23 - /profile.jsp
+2017-11-23 15:22:16 INFO  Version:45 - HHH000412: Hibernate Core {5.2.12.Final}
+2017-11-23 15:22:16 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-11-23 15:22:16 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-23 15:22:17 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2017-11-23 15:22:17 INFO  pooling:126 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:~/Projects/labs/web/lab1/itemCard/web/h2orders.db]
+2017-11-23 15:22:17 INFO  pooling:135 - HHH10001001: Connection properties: {}
+2017-11-23 15:22:17 INFO  pooling:140 - HHH10001003: Autocommit mode: false
+2017-11-23 15:22:17 INFO  DriverManagerConnectionProviderImpl:41 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-11-23 15:22:18 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-11-23 15:22:20 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2bf41c21] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2017-11-23 15:22:20 WARN  deprecation:1813 - HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2017-11-23 15:22:20 INFO  LogFilter:23 - /comments
+2017-11-23 15:22:20 WARN  deprecation:1813 - HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2017-11-23 15:22:29 INFO  LogFilter:23 - /comments
+2017-11-23 15:22:29 INFO  LogFilter:23 - /comments
+2017-11-23 15:22:29 WARN  deprecation:1813 - HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2017-11-23 15:26:15 INFO  LogFilter:47 - Unauthorized; URL: /; Params: 
+2017-11-23 15:26:16 INFO  LogFilter:47 - Unauthorized; URL: /; Params: 
+2017-11-23 15:26:17 INFO  LogFilter:47 - Unauthorized; URL: /; Params: 
+2017-11-23 15:26:17 INFO  LogFilter:47 - Unauthorized; URL: /static/css/styles.css; Params: 
+2017-11-23 15:26:17 INFO  LogFilter:47 - Unauthorized; URL: /static/img/microcontrollers/raspberryPi.jpg; Params: 
+2017-11-23 15:26:17 INFO  LogFilter:47 - Unauthorized; URL: /static/img/microcontrollers/arduino_nano.jpg; Params: 
+2017-11-23 15:26:17 INFO  LogFilter:47 - Unauthorized; URL: /static/img/microcontrollers/arduino_uno.jpg; Params: 
+2017-11-23 15:26:17 INFO  LogFilter:47 - Unauthorized; URL: /; Params: price_low : 0; price_high : 100000; frequency_low : 0.0; frequency_high : 100.0; vendors : raspberrypi, arduino
+2017-11-23 15:26:26 INFO  LogFilter:47 - Unauthorized; URL: /login; Params: 
+2017-11-23 15:26:26 INFO  LogFilter:47 - Username: shopuser; URL: /; Params: 
+2017-11-23 15:26:27 INFO  LogFilter:47 - Username: shopuser; URL: /cart.jsp; Params: add : raspberrypi3; lang : ru
+2017-11-23 15:26:30 INFO  LogFilter:47 - Username: shopuser; URL: /; Params: 
+2017-11-23 15:26:31 INFO  LogFilter:47 - Username: shopuser; URL: /cart.jsp; Params: add : arduinouno; lang : ru
+2017-11-23 15:26:32 INFO  LogFilter:47 - Username: shopuser; URL: /order.jsp; Params: 
+2017-11-23 15:26:38 INFO  LogFilter:47 - Username: shopuser; URL: /order_complete.jsp; Params: address : Первый магазин; delivery : false
+2017-11-23 15:26:39 INFO  Version:45 - HHH000412: Hibernate Core {5.2.12.Final}
+2017-11-23 15:26:39 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-11-23 15:26:39 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-11-23 15:26:40 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2017-11-23 15:26:40 INFO  pooling:126 - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:~/Projects/labs/web/lab1/itemCard/web/h2orders.db]
+2017-11-23 15:26:40 INFO  pooling:135 - HHH10001001: Connection properties: {}
+2017-11-23 15:26:40 INFO  pooling:140 - HHH10001003: Autocommit mode: false
+2017-11-23 15:26:40 INFO  DriverManagerConnectionProviderImpl:41 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-11-23 15:26:41 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-11-23 15:26:43 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26eaa4c6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2017-11-23 15:26:46 INFO  LogFilter:47 - Username: shopuser; URL: /profile.jsp; Params: 
+2017-11-23 15:26:46 WARN  deprecation:1813 - HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2017-11-23 15:26:47 INFO  LogFilter:47 - Username: shopuser; URL: /comments; Params: 
+2017-11-23 15:26:47 WARN  deprecation:1813 - HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2017-11-23 15:27:29 INFO  LogFilter:47 - Username: shopuser; URL: /; Params: 
+2017-11-23 15:27:31 INFO  LogFilter:47 - Username: shopuser; URL: /cart.jsp; Params: add : raspberrypi3; lang : ru
+2017-11-23 15:27:35 INFO  LogFilter:47 - Username: shopuser; URL: /cart.jsp; Params: setcountid : raspberrypi3; setcountq : 2
+2017-11-23 15:27:36 INFO  LogFilter:47 - Username: shopuser; URL: /; Params: 
+2017-11-23 15:27:37 INFO  LogFilter:47 - Username: shopuser; URL: /cart.jsp; Params: add : arduinouno; lang : ru
+2017-11-23 15:27:38 INFO  LogFilter:47 - Username: shopuser; URL: /order.jsp; Params: 
+2017-11-23 15:27:43 INFO  LogFilter:47 - Username: shopuser; URL: /order_complete.jsp; Params: address : Первый магазин; delivery : false
+2017-11-23 15:27:44 INFO  LogFilter:47 - Username: shopuser; URL: /profile.jsp; Params: 
+2017-11-23 15:27:44 WARN  deprecation:1813 - HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2017-11-23 15:27:45 INFO  LogFilter:47 - Username: shopuser; URL: /comments; Params: 
+2017-11-23 15:27:45 WARN  deprecation:1813 - HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead

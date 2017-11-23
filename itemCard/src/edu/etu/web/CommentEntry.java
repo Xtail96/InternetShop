@@ -1,5 +1,7 @@
 package edu.etu.web;
 
+import org.hibernate.Session;
+
 import javax.persistence.*;
 import java.util.*;
 
@@ -19,7 +21,11 @@ public class CommentEntry {
     private String text;
 
     public static List<CommentEntry> getAll() {
-        return HibernateConnector.getSessionFactory().openSession().createCriteria(CommentEntry.class).list();
+        Session dbSession = HibernateConnector.getSessionFactory().openSession();
+        List<CommentEntry> commentsList = dbSession.createCriteria(CommentEntry.class).list();
+        dbSession.close();
+        return commentsList;
+
     }
 
     public int getId() {
