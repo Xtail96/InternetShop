@@ -15,6 +15,9 @@
 
 <c:set var="itemsMap" value="${Database.getAllItems()}" scope="request"/>
 <fmt:setLocale value="${util:getLang(pageContext.request, pageContext.response)}"/>
+
+<c:set var="lang" value="${util:getLang(pageContext.request, pageContext.response)}"/>
+<fmt:setLocale value="${lang}"/>
 <c:choose>
     <c:when test="${empty sessionScope.username}">
         <c:redirect url="/login"/>
@@ -63,6 +66,11 @@
 
         onload = () => {
             loadComments();
+            setInterval(printTime, 1000);
+            printTime();
+            function printTime() {
+                document.getElementById("current_time").innerHTML = "" + new Date().toLocaleString("${lang}");
+            }
         }
 
     </script>
@@ -77,6 +85,7 @@
             <br>
             <fmt:message key="activeTab"/>:
             <fmt:message key="${initParam.activeTab}"/>
+            <span id="current_time"></span>
             <h2>
                 <fmt:setBundle basename="strings"/>
                 <fmt:message key="orders"/>:
